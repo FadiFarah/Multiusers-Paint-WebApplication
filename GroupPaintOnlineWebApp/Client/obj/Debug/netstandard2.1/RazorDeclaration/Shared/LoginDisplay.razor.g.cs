@@ -13,77 +13,77 @@ namespace GroupPaintOnlineWebApp.Client.Shared
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
+#line 1 "C:\Users\fadif\source\repos\GroupPaintOnlineWebApp\GroupPaintOnlineWebApp\Client\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
+#line 2 "C:\Users\fadif\source\repos\GroupPaintOnlineWebApp\GroupPaintOnlineWebApp\Client\_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
+#line 4 "C:\Users\fadif\source\repos\GroupPaintOnlineWebApp\GroupPaintOnlineWebApp\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
+#line 5 "C:\Users\fadif\source\repos\GroupPaintOnlineWebApp\GroupPaintOnlineWebApp\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
+#line 6 "C:\Users\fadif\source\repos\GroupPaintOnlineWebApp\GroupPaintOnlineWebApp\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
+#line 7 "C:\Users\fadif\source\repos\GroupPaintOnlineWebApp\GroupPaintOnlineWebApp\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
+#line 8 "C:\Users\fadif\source\repos\GroupPaintOnlineWebApp\GroupPaintOnlineWebApp\Client\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
+#line 9 "C:\Users\fadif\source\repos\GroupPaintOnlineWebApp\GroupPaintOnlineWebApp\Client\_Imports.razor"
 using GroupPaintOnlineWebApp.Client;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
+#line 10 "C:\Users\fadif\source\repos\GroupPaintOnlineWebApp\GroupPaintOnlineWebApp\Client\_Imports.razor"
 using GroupPaintOnlineWebApp.Client.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Shared\LoginDisplay.razor"
+#line 1 "C:\Users\fadif\source\repos\GroupPaintOnlineWebApp\GroupPaintOnlineWebApp\Client\Shared\LoginDisplay.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Shared\LoginDisplay.razor"
+#line 2 "C:\Users\fadif\source\repos\GroupPaintOnlineWebApp\GroupPaintOnlineWebApp\Client\Shared\LoginDisplay.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 
 #line default
@@ -97,7 +97,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 19 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Shared\LoginDisplay.razor"
+#line 18 "C:\Users\fadif\source\repos\GroupPaintOnlineWebApp\GroupPaintOnlineWebApp\Client\Shared\LoginDisplay.razor"
       
     private async Task BeginSignOut(MouseEventArgs args)
     {

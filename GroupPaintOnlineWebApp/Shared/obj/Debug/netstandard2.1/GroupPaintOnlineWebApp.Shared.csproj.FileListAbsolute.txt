@@ -16,13 +16,3 @@ C:\Users\fadif\source\repos\GroupPaintOnlineWebApp\Multiusers-Paint-WebApplicati
 C:\Users\fadif\source\repos\GroupPaintOnlineWebApp\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\obj\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.csproj.CoreCompileInputs.cache
 C:\Users\fadif\source\repos\GroupPaintOnlineWebApp\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\obj\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.dll
 C:\Users\fadif\source\repos\GroupPaintOnlineWebApp\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\obj\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.pdb
-D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\bin\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.deps.json
-D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\bin\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.dll
-D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\bin\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.pdb
-D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\obj\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.AssemblyInfoInputs.cache
-D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\obj\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.AssemblyInfo.cs
-D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\obj\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.dll
-D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\obj\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.pdb
-D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\obj\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.csproj.AssemblyReference.cache
-D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\obj\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
-D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\obj\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.csproj.CoreCompileInputs.cache
