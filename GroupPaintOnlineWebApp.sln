@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupPaintOnlineWebApp.Server", "GroupPaintOnlineWebApp\Server\GroupPaintOnlineWebApp.Server.csproj", "{B5B014BC-4D3F-477A-AC3C-66D81A5F980B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroupPaintOnlineWebApp.Server", "GroupPaintOnlineWebApp\Server\GroupPaintOnlineWebApp.Server.csproj", "{B5B014BC-4D3F-477A-AC3C-66D81A5F980B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupPaintOnlineWebApp.Client", "GroupPaintOnlineWebApp\Client\GroupPaintOnlineWebApp.Client.csproj", "{870EEA96-92D1-4C49-BAD7-366E1458040F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroupPaintOnlineWebApp.Client", "GroupPaintOnlineWebApp\Client\GroupPaintOnlineWebApp.Client.csproj", "{870EEA96-92D1-4C49-BAD7-366E1458040F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupPaintOnlineWebApp.Shared", "GroupPaintOnlineWebApp\Shared\GroupPaintOnlineWebApp.Shared.csproj", "{1805FFAC-A10E-40D7-9B8D-42243829CD6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroupPaintOnlineWebApp.Shared", "GroupPaintOnlineWebApp\Shared\GroupPaintOnlineWebApp.Shared.csproj", "{1805FFAC-A10E-40D7-9B8D-42243829CD6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

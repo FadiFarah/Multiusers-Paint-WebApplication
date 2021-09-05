@@ -6,14 +6,15 @@
 
 <AuthorizeView>
     <Authorized>
-        <a href="authentication/profile">Hello, @context.User.Identity.Name!</a>
-        <button class="nav-link btn btn-link" @onclick="BeginSignOut">Log out</button>
+        <li><a href="authentication/profile">Hello, @context.User.Identity.Name!</a></li>
+        <span class="auth-container"><li><button class="auth-btn" @onclick="BeginSignOut">Log out</button></li></span>
     </Authorized>
     <NotAuthorized>
-        <a href="authentication/register">Register</a>
-        <a href="authentication/login">Log in</a>
+        <span class="auth-container"><li><a class="auth-btn" href="authentication/register">Register</a></li></span>
+        <span class="auth-container"><li><a class="auth-btn" href="authentication/login">Log in</a></li></span>
     </NotAuthorized>
 </AuthorizeView>
+
 
 @code{
     private async Task BeginSignOut(MouseEventArgs args)
