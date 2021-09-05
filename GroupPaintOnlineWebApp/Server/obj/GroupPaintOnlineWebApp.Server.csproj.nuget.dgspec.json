@@ -1,0 +1,242 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\fadif\\source\\repos\\GroupPaintOnlineWebApp\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Server\\GroupPaintOnlineWebApp.Server.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\fadif\\source\\repos\\GroupPaintOnlineWebApp\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Client\\GroupPaintOnlineWebApp.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\fadif\\source\\repos\\GroupPaintOnlineWebApp\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Client\\GroupPaintOnlineWebApp.Client.csproj",
+        "projectName": "GroupPaintOnlineWebApp.Client",
+        "projectPath": "C:\\Users\\fadif\\source\\repos\\GroupPaintOnlineWebApp\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Client\\GroupPaintOnlineWebApp.Client.csproj",
+        "packagesPath": "C:\\Users\\fadif\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fadif\\source\\repos\\GroupPaintOnlineWebApp\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\fadif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\fadif\\source\\repos\\GroupPaintOnlineWebApp\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\GroupPaintOnlineWebApp.Shared.csproj": {
+                "projectPath": "C:\\Users\\fadif\\source\\repos\\GroupPaintOnlineWebApp\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\GroupPaintOnlineWebApp.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Authentication": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Build": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "System.Net.Http.Json": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\fadif\\source\\repos\\GroupPaintOnlineWebApp\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Server\\GroupPaintOnlineWebApp.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\fadif\\source\\repos\\GroupPaintOnlineWebApp\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Server\\GroupPaintOnlineWebApp.Server.csproj",
+        "projectName": "GroupPaintOnlineWebApp.Server",
+        "projectPath": "C:\\Users\\fadif\\source\\repos\\GroupPaintOnlineWebApp\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Server\\GroupPaintOnlineWebApp.Server.csproj",
+        "packagesPath": "C:\\Users\\fadif\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fadif\\source\\repos\\GroupPaintOnlineWebApp\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Server\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\fadif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\fadif\\source\\repos\\GroupPaintOnlineWebApp\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Client\\GroupPaintOnlineWebApp.Client.csproj": {
+                "projectPath": "C:\\Users\\fadif\\source\\repos\\GroupPaintOnlineWebApp\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Client\\GroupPaintOnlineWebApp.Client.csproj"
+              },
+              "C:\\Users\\fadif\\source\\repos\\GroupPaintOnlineWebApp\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\GroupPaintOnlineWebApp.Shared.csproj": {
+                "projectPath": "C:\\Users\\fadif\\source\\repos\\GroupPaintOnlineWebApp\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\GroupPaintOnlineWebApp.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.ApiAuthorization.IdentityServer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\fadif\\source\\repos\\GroupPaintOnlineWebApp\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\GroupPaintOnlineWebApp.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\fadif\\source\\repos\\GroupPaintOnlineWebApp\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\GroupPaintOnlineWebApp.Shared.csproj",
+        "projectName": "GroupPaintOnlineWebApp.Shared",
+        "projectPath": "C:\\Users\\fadif\\source\\repos\\GroupPaintOnlineWebApp\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\GroupPaintOnlineWebApp.Shared.csproj",
+        "packagesPath": "C:\\Users\\fadif\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fadif\\source\\repos\\GroupPaintOnlineWebApp\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\fadif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
