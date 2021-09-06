@@ -6,7 +6,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
-      "GroupPaintOnlineWebApp.Client.dll": "sha256-kp1QjpmBS8qjTBaV3jW\/HFaltxznqXoJ7FYv58kTOpM=",
+      "GroupPaintOnlineWebApp.Client.dll": "sha256-3grfcABmZWc5tInSmj11j5js1R4D0SpvJy0\/7VmmQjQ=",
       "System.Net.Http.Json.dll": "sha256-99dseBOagY3mzu5Y8Eqm8gRI+o8QbbCp7R2Ew9bQ+5E=",
       "System.Buffers.dll": "sha256-ZxXy75PYbzJxNfAc\/SAP1nUYm4gt1jSaOpFnBb9m85M=",
       "mscorlib.dll": "sha256-BaZPMj95+YNe3G4ckTGD6szZFwZeA2MOHn91zTGKDeU=",
@@ -47,7 +47,7 @@
       "Microsoft.JSInterop.dll": "sha256-LqwA2Rpm96Ualk0IhLZar87kfRCyKHzHTeTt2jYhm7M=",
       "Blazor.Extensions.Canvas.dll": "sha256-W20pWMXQg2yTv0w4VJhrjCJKNRYe3PiUU9S76XipNe8=",
       "Microsoft.AspNetCore.Components.dll": "sha256-PEg9ghiKSWBTX0jq8pFDvv2Yvw92Y8W0ELtWrSE4fhA=",
-      "GroupPaintOnlineWebApp.Shared.dll": "sha256-blmNnR8olBUtpLmdWkKq2o3GVnMV3+L0D9K8Tc3obDM=",
+      "GroupPaintOnlineWebApp.Shared.dll": "sha256-MlBvXEAp7dW7rHdk1WPY6pFojWDf\/uqI+9yPe8jWH28=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-4NUQ26HmvXRi8smc0jz9940OUECDLQnoMWQLrMLe0ok=",
       "Microsoft.AspNetCore.Metadata.dll": "sha256-825GQI5nG1C1WqLD1SNKSpjzLCNbH2\/KChgjBL0SSXI=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-bSgsT2x5xMvs8mara5wU+EJwcyHa9GVMU85HwhWcdWM=",
@@ -67,9 +67,9 @@
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-czNf3btAeBW\/vvID5LAfgcsNZ+GM3ssVuPaMflcg0rs="
     },
     "pdb": {
-      "GroupPaintOnlineWebApp.Client.pdb": "sha256-YUSoh0dDMWETAH1NO51x0dFLvhLkFTLXloazXuz3c4U=",
+      "GroupPaintOnlineWebApp.Client.pdb": "sha256-SgPTjLWWCSLx0R30iqZvTm9ET9l\/IaqTeyCw6G7IPjE=",
       "Blazor.Extensions.Canvas.pdb": "sha256-JF8vHi8kiD5tbiHU7xq5dwocqi8F+YLLiHsCS\/v4Ks0=",
-      "GroupPaintOnlineWebApp.Shared.pdb": "sha256-5fIXhNv2tNIOvlqZ\/nLvE6J+v24WmjQtH2dH9C9iQgk="
+      "GroupPaintOnlineWebApp.Shared.pdb": "sha256-kHG4s9ezyEdCxZeoAw5mPMA10cxnZZeEeo7hEk8ZkdE="
     },
     "runtime": {
       "dotnet.3.2.0.js": "sha256-mPoqx7XczFHBWk3gRNn0hc9ekG1OvkKY4XiKRY5Mj5U=",

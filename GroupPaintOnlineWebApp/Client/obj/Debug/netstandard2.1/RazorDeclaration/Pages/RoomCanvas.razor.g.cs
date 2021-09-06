@@ -13,91 +13,91 @@ namespace GroupPaintOnlineWebApp.Client.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
+#line 1 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
+#line 2 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
+#line 3 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
+#line 4 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
+#line 5 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
+#line 6 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
+#line 7 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
+#line 8 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
+#line 9 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
 using GroupPaintOnlineWebApp.Client;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
+#line 10 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\_Imports.razor"
 using GroupPaintOnlineWebApp.Client.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomCanvas.razor"
+#line 2 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomCanvas.razor"
 using Blazor.Extensions;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomCanvas.razor"
+#line 3 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomCanvas.razor"
 using Blazor.Extensions.Canvas;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomCanvas.razor"
+#line 4 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomCanvas.razor"
 using Blazor.Extensions.Canvas.Canvas2D;
 
 #line default
@@ -112,8 +112,8 @@ using Blazor.Extensions.Canvas.Canvas2D;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 34 "D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomCanvas.razor"
-        [Parameter]    public string Id { get; set; }    public int Height { get; set; }    public int Width { get; set; }    public ElementReference ToolBox;    private Canvas2DContext _context;    protected BECanvasComponent _canvasReference;    protected override async Task OnInitializedAsync()    {        var dimension = await JsRuntime.InvokeAsync<WindowDimension>("getWindowDimensions");        Height = dimension.Height;        Width = dimension.Width;    }    protected override async Task OnAfterRenderAsync(bool firstRender)    {        this._context = await this._canvasReference.CreateCanvas2DAsync();        await this._context.SetFillStyleAsync("red");        await this._context.FillRectAsync(10, 100, 100, 100);        await this._context.SetFontAsync("38px Calibri");        await this._context.StrokeTextAsync("Hello Blazor!!!", 5, 100);    }    public class WindowDimension    {        public int Width { get; set; }        public int Height { get; set; }    }
+#line 34 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomCanvas.razor"
+            [Parameter]    public string Id { get; set; }    public int Height { get; set; }    public int Width { get; set; }    public ElementReference ToolBox;    private Canvas2DContext _context;    protected BECanvasComponent _canvasReference;    protected override async Task OnInitializedAsync()    {        var dimension = await JsRuntime.InvokeAsync<WindowDimension>("getWindowDimensions");        Height = dimension.Height;        Width = dimension.Width;    }    protected override async Task OnAfterRenderAsync(bool firstRender)    {        this._context = await this._canvasReference.CreateCanvas2DAsync();        await this._context.SetFillStyleAsync("red");        await this._context.FillRectAsync(10, 100, 100, 100);        await this._context.SetFontAsync("38px Calibri");        await this._context.StrokeTextAsync("Hello Blazor!!!", 5, 100);    }    public class WindowDimension    {        public int Width { get; set; }        public int Height { get; set; }    }
 
 #line default
 #line hidden

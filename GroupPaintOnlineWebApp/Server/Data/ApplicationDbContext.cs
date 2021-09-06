@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GroupPaintOnlineWebApp.Shared;
 
 namespace GroupPaintOnlineWebApp.Server.Data
 {
@@ -17,5 +18,6 @@ namespace GroupPaintOnlineWebApp.Server.Data
             IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
         {
         }
+        public DbSet<GroupPaintOnlineWebApp.Shared.Room> Room { get; set; }
     }
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DISK\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\GroupPaintOnlineWebApp.Shared.csproj": {}
+    "C:\\Users\\fadif\\source\\repos\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\GroupPaintOnlineWebApp.Shared.csproj": {}
   },
   "projects": {
-    "D:\\DISK\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\GroupPaintOnlineWebApp.Shared.csproj": {
+    "C:\\Users\\fadif\\source\\repos\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\GroupPaintOnlineWebApp.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DISK\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\GroupPaintOnlineWebApp.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\fadif\\source\\repos\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\GroupPaintOnlineWebApp.Shared.csproj",
         "projectName": "GroupPaintOnlineWebApp.Shared",
-        "projectPath": "D:\\DISK\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\GroupPaintOnlineWebApp.Shared.csproj",
-        "packagesPath": "C:\\Users\\USER1\\.nuget\\packages\\",
-        "outputPath": "D:\\DISK\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\fadif\\source\\repos\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\GroupPaintOnlineWebApp.Shared.csproj",
+        "packagesPath": "C:\\Users\\fadif\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fadif\\source\\repos\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\USER1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fadif\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
