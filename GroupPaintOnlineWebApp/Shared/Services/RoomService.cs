@@ -20,5 +20,14 @@ namespace GroupPaintOnlineWebApp.Shared.Services
             return await httpClient.GetFromJsonAsync<Room[]>("/api/Rooms");
         }
 
+        public async Task<HttpResponseMessage> GetRoom(string id)
+        {
+            return await httpClient.GetAsync("/api/Rooms/"+id);
+        }
+
+        public async Task<HttpResponseMessage> GetRoom(string id, string password)
+        {
+            return await httpClient.GetAsync("/api/Rooms/"+id+"/"+password);
+        }
     }
 }

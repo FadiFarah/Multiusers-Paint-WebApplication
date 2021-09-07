@@ -118,39 +118,6 @@ using System.Net;
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 62 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomsList.razor"
-       
-
-    protected async Task FormSubmitted(EditContext editContext)
-    {
-        if (editContext.Model is Room)
-        {
-            Room r = ((Room)editContext.Model);
-            if (r.IsPublic)
-            {
-                NavManager.NavigateTo("/room/" + r.Id);
-            }
-            else
-            {
-                var response = await Http.GetAsync("/api/Rooms/"+r.Id+"/"+r.Password);
-                if (response.StatusCode == HttpStatusCode.NotFound)
-                {
-                    NavManager.NavigateTo("/roomslist");
-                }
-                else
-                {
-                    NavManager.NavigateTo("/room/" + r.Id+"/"+r.Password);
-                }
-            }
-        }
-
-
-    }
-
-#line default
-#line hidden
-#nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
     }

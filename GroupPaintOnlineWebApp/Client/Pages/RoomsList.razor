@@ -59,34 +59,6 @@ else
     </div>
 }
 
-@code {
-
-    protected async Task FormSubmitted(EditContext editContext)
-    {
-        if (editContext.Model is Room)
-        {
-            Room r = ((Room)editContext.Model);
-            if (r.IsPublic)
-            {
-                NavManager.NavigateTo("/room/" + r.Id);
-            }
-            else
-            {
-                var response = await Http.GetAsync("/api/Rooms/"+r.Id+"/"+r.Password);
-                if (response.StatusCode == HttpStatusCode.NotFound)
-                {
-                    NavManager.NavigateTo("/roomslist");
-                }
-                else
-                {
-                    NavManager.NavigateTo("/room/" + r.Id+"/"+r.Password);
-                }
-            }
-        }
-
-
-    }
-}
 
 
 

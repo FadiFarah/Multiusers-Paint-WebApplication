@@ -84,73 +84,20 @@ using GroupPaintOnlineWebApp.Client.Shared;
 #nullable disable
 #nullable restore
 #line 3 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomCanvas.razor"
-using Blazor.Extensions;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 4 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomCanvas.razor"
 using Blazor.Extensions.Canvas;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 5 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomCanvas.razor"
-using Blazor.Extensions.Canvas.Canvas2D;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 6 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomCanvas.razor"
-using GroupPaintOnlineWebApp.Shared;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 7 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomCanvas.razor"
-using System.Net;
 
 #line default
 #line hidden
 #nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/room/{Id}")]
     [Microsoft.AspNetCore.Components.RouteAttribute("/room/{Id}/{Password}")]
-    public partial class RoomCanvas : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class RoomCanvas : GroupPaintOnlineWebApp.Client.PagesBase.RoomCanvasBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 37 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomCanvas.razor"
-        [Parameter]
-    public string Id { get; set; }
-    [Parameter]
-    public string Password { get; set; }    public int Height { get; set; }    public int Width { get; set; }    public ElementReference ToolBox;    private Canvas2DContext _context;    protected BECanvasComponent _canvasReference;    protected override async Task OnInitializedAsync()    {        var dimension = await JsRuntime.InvokeAsync<WindowDimension>("getWindowDimensions");        Height = dimension.Height;        Width = dimension.Width;        var response = await Http.GetAsync("/api/Rooms/" + Id);
-            if (response.StatusCode == HttpStatusCode.NotFound)
-            {
-                NavManager.NavigateTo("/roomslist");
-            }
-            else
-            {
-                var room = response.Content.ReadFromJsonAsync<Room>();
-                if (room.Result.Password != Password)
-                {
-                    NavManager.NavigateTo("/roomslist");
-                }
-            }    }    protected override async Task OnAfterRenderAsync(bool firstRender)    {        this._context = await this._canvasReference.CreateCanvas2DAsync();        await this._context.SetFillStyleAsync("red");        await this._context.FillRectAsync(10, 100, 100, 100);        await this._context.SetFontAsync("38px Calibri");        await this._context.StrokeTextAsync("Hello Blazor!!!", 5, 100);        Console.WriteLine("Id " + Id + " Password " + Password);    }    public class WindowDimension    {        public int Width { get; set; }        public int Height { get; set; }    }
-
-#line default
-#line hidden
-#nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JsRuntime { get; set; }
     }
 }
 #pragma warning restore 1591

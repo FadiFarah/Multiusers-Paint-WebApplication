@@ -21,6 +21,7 @@
     <script src="_content/Blazor.Extensions.Canvas/blazor.extensions.canvas.js"></script>
     <script src="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js"></script>
     <script src="_framework/blazor.webassembly.js"></script>
+    <script src="/js/canvas.js"></script>
     <script>
         window.getWindowDimensions = function () {
             return {
@@ -28,15 +29,7 @@
                 height: window.innerHeight
             };
         };
-        window.addEventListener('resize',() => {
-            var canvasDoc = document.querySelector('canvas');
-            if (canvasDoc != null) {
-                var paintToolBox = document.querySelector('.paint-tool-box');
-                canvasDoc.width = window.innerWidth - 100;
-                paintToolBox.width = window.innerWidth;
-                paintToolBox.height = window.innerHeight - (window.innerHeight / 4);
-            }
-        })
+        
     </script>
 
 </body>
