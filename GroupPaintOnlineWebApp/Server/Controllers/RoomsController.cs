@@ -25,7 +25,8 @@ namespace GroupPaintOnlineWebApp.Server.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Room>>> GetRoom()
         {
-            return await _context.Room.ToListAsync();
+            var rooms = await _context.Room.ToListAsync();
+            return rooms;
         }
 
         // GET: api/Rooms/5
@@ -35,6 +36,19 @@ namespace GroupPaintOnlineWebApp.Server.Controllers
             var room = await _context.Room.FindAsync(id);
 
             if (room == null)
+            {
+                return NotFound();
+            }
+
+            return room;
+        }
+
+        [HttpGet("{id}/{password}")]
+        public async Task<ActionResult<Room>> GetRoom(string id,string password)
+        {
+            var room = await _context.Room.FindAsync(id);
+
+            if (room == null || room.Password!=password)
             {
                 return NotFound();
             }

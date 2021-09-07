@@ -82,14 +82,77 @@ using GroupPaintOnlineWebApp.Client.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomsList.razor"
+using Microsoft.AspNetCore.Authorization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomsList.razor"
+using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomsList.razor"
+using GroupPaintOnlineWebApp.Shared;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomsList.razor"
+using System.Net;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/roomslist")]
-    public partial class RoomsList : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class RoomsList : GroupPaintOnlineWebApp.Client.PagesBase.RoomsListBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 62 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomsList.razor"
+       
+
+    protected async Task FormSubmitted(EditContext editContext)
+    {
+        if (editContext.Model is Room)
+        {
+            Room r = ((Room)editContext.Model);
+            if (r.IsPublic)
+            {
+                NavManager.NavigateTo("/room/" + r.Id);
+            }
+            else
+            {
+                var response = await Http.GetAsync("/api/Rooms/"+r.Id+"/"+r.Password);
+                if (response.StatusCode == HttpStatusCode.NotFound)
+                {
+                    NavManager.NavigateTo("/roomslist");
+                }
+                else
+                {
+                    NavManager.NavigateTo("/room/" + r.Id+"/"+r.Password);
+                }
+            }
+        }
+
+
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
     }
 }
 #pragma warning restore 1591

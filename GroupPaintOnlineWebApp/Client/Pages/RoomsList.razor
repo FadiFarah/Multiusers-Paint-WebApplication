@@ -1,4 +1,92 @@
-﻿@page "/roomslist"<div class="d-flex justify-content-center mb-3 align-items-stretch" style="width:100%">    <div class="p-2"><h1>ROOMS LIST</h1></div></div><div><a href="/createroom">Create New</a></div>
+﻿@page "/roomslist"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using GroupPaintOnlineWebApp.Shared
+@using System.Net
+@inherits GroupPaintOnlineWebApp.Client.PagesBase.RoomsListBase
+@inject NavigationManager NavManager
+@inject HttpClient Http
+
+<div class="d-flex justify-content-center mb-3 align-items-stretch" style="width:100%">
+    <div class="p-2"><h1>ROOMS LIST</h1></div>
+</div>
 
 
-<div class="d-flex justify-content-center mb-3 align-items-center text-center" style="width:100%">    <table cellspacing="0" cellpadding="0" class="table">        <thead>            <tr>                <th>Room Name</th>                <th>Current Users</th>                <th>Is Public</th>                <th>Password</th>            </tr>        </thead>        <tbody>            <tr>                <td>Painting a Dog</td>                <td>3</td>                <td>true</td>                <td><input value="" type="password"><span class="auth-container"><a class="auth-btn" href="/room/{id}/">Join</a></span></td>            </tr>            <tr>                <td>Painting a Cat</td>                <td>2</td>                <td>true</td>                <td><input value="" type="password"><span class="auth-container"><a class="auth-btn" href="/room/{id}/">Join</a></span></td>            </tr>        </tbody>    </table></div>
+<div><a href="/createroom">Create New</a></div>
+
+@if (Rooms == null)
+{
+    <h1>Loading...</h1>
+}
+else
+{
+    <div class="d-flex justify-content-center mb-3 align-items-center text-center" style="width:100%">
+        <table cellspacing="0" cellpadding="0" class="table">
+            <thead>
+                <tr>
+                    <th>Room Name</th>
+                    <th>Current Users</th>
+                    <th>Is Public</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Rooms.Length; ++i)
+                {
+                    int local_i = i;
+                    <tr>
+                        <td>@Rooms[local_i].RoomName</td>
+                        <td>@Rooms[local_i].CurrentUsers</td>
+                        <td>@Rooms[local_i].IsPublic</td>
+                        <td>
+                            <EditForm Model="@RoomsList[local_i]" OnSubmit=@FormSubmitted>
+                                @if (Rooms[local_i].IsPublic)
+                                {
+                                    <input @bind-value="@RoomsList[local_i].Password" disabled id="Password" type="password" />
+                                }
+                                else { 
+                                    <input @bind-value="@RoomsList[local_i].Password" id="Password" type="password" />
+                                }
+                                <span class="auth-container">
+                                    <input type="submit" value="Join" class="auth-btn">
+                                </span>
+                            </EditForm>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@code {
+
+    protected async Task FormSubmitted(EditContext editContext)
+    {
+        if (editContext.Model is Room)
+        {
+            Room r = ((Room)editContext.Model);
+            if (r.IsPublic)
+            {
+                NavManager.NavigateTo("/room/" + r.Id);
+            }
+            else
+            {
+                var response = await Http.GetAsync("/api/Rooms/"+r.Id+"/"+r.Password);
+                if (response.StatusCode == HttpStatusCode.NotFound)
+                {
+                    NavManager.NavigateTo("/roomslist");
+                }
+                else
+                {
+                    NavManager.NavigateTo("/room/" + r.Id+"/"+r.Password);
+                }
+            }
+        }
+
+
+    }
+}
+
+
+

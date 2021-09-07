@@ -1,3 +1,5 @@
+using GroupPaintOnlineWebApp.Shared.Services;
+using GroupPaintOnlineWebApp.Shared.Services.ServicesInterfaces;
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -25,7 +27,10 @@ namespace GroupPaintOnlineWebApp.Client
             builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("GroupPaintOnlineWebApp.ServerAPI"));
 
             builder.Services.AddApiAuthorization();
-
+            builder.Services.AddHttpClient<IRoomService, RoomService>(client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:44301/");
+            });
             await builder.Build().RunAsync();
         }
     }
