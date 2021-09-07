@@ -26,3 +26,12 @@ D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\obj\Debug\
 D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\obj\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.csproj.AssemblyReference.cache
 D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\obj\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
 D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\obj\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\bin\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.deps.json
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\bin\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.dll
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\bin\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.pdb
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\obj\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.AssemblyInfoInputs.cache
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\obj\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.AssemblyInfo.cs
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\obj\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\obj\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.dll
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\obj\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.pdb
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Shared\obj\Debug\netstandard2.1\GroupPaintOnlineWebApp.Shared.csproj.AssemblyReference.cache
