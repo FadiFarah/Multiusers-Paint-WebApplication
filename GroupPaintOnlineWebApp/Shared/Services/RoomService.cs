@@ -29,5 +29,10 @@ namespace GroupPaintOnlineWebApp.Shared.Services
         {
             return await httpClient.GetAsync("/api/Rooms/"+id+"/"+password);
         }
+
+        public async Task<HttpResponseMessage> PostRoom(Room room)
+        {
+            return await httpClient.PostAsJsonAsync<Room>("api/Rooms",room);
+        }
     }
 }

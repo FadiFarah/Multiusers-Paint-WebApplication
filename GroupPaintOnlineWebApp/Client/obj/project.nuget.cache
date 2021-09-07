@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NQfBb0MiQ7qD8GiTZ7OR+HC3mGOMw0Ed6bNtCLy4kli7uSHmJxxyK86YuPD9MkKNCjvRfo3PU1gLAbtHL4GphQ==",
+  "dgSpecHash": "XiNPbvHGUbXAEG3SOmoAyH0AolpaaVHwP34nOKKYYwY3qI6Glf8hKemD2Tn4oHNy3pH+I2MLbZYZQ7rI0vKaLQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\fadif\\source\\repos\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Client\\GroupPaintOnlineWebApp.Client.csproj",
   "expectedPackageFiles": [
@@ -37,7 +37,7 @@
     "C:\\Users\\fadif\\.nuget\\packages\\microsoft.jsinterop\\3.1.6\\microsoft.jsinterop.3.1.6.nupkg.sha512",
     "C:\\Users\\fadif\\.nuget\\packages\\microsoft.jsinterop.webassembly\\3.2.1\\microsoft.jsinterop.webassembly.3.2.1.nupkg.sha512",
     "C:\\Users\\fadif\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
-    "C:\\Users\\fadif\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "C:\\Users\\fadif\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\fadif\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\fadif\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
     "C:\\Users\\fadif\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

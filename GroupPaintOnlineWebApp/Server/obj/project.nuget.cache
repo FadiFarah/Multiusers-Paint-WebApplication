@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RgdmyJCsVGU5P2c4Tby9jmJyDwnn9R89k96o6QhyRZNA+QE/O2yGvhy6X2bHe05DcfV5Cqo4+LSRtnG8ffjoYg==",
+  "dgSpecHash": "v0vUfTpQI6Sdqs9JPPB/eWLTRcYJ7tLCYSv4Eb5UMEEcG3wQbImPfRKTA6srwgEO0nc0mbj69vvYbv/Eeo2/jg==",
   "success": true,
   "projectFilePath": "C:\\Users\\fadif\\source\\repos\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Server\\GroupPaintOnlineWebApp.Server.csproj",
   "expectedPackageFiles": [
@@ -123,7 +123,7 @@
     "C:\\Users\\fadif\\.nuget\\packages\\system.collections.nongeneric\\4.3.0\\system.collections.nongeneric.4.3.0.nupkg.sha512",
     "C:\\Users\\fadif\\.nuget\\packages\\system.collections.specialized\\4.3.0\\system.collections.specialized.4.3.0.nupkg.sha512",
     "C:\\Users\\fadif\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
-    "C:\\Users\\fadif\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "C:\\Users\\fadif\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\fadif\\.nuget\\packages\\system.componentmodel.primitives\\4.3.0\\system.componentmodel.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\fadif\\.nuget\\packages\\system.componentmodel.typeconverter\\4.3.0\\system.componentmodel.typeconverter.4.3.0.nupkg.sha512",
     "C:\\Users\\fadif\\.nuget\\packages\\system.composition\\1.0.31\\system.composition.1.0.31.nupkg.sha512",
