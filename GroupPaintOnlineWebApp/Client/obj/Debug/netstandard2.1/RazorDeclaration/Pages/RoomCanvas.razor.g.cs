@@ -89,6 +89,20 @@ using Blazor.Extensions.Canvas;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomCanvas.razor"
+using Microsoft.AspNetCore.Authorization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Pages\RoomCanvas.razor"
+           [Authorize]
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/room/{Id}")]
     [Microsoft.AspNetCore.Components.RouteAttribute("/room/{Id}/{Password}")]
     public partial class RoomCanvas : GroupPaintOnlineWebApp.Client.PagesBase.RoomCanvasBase

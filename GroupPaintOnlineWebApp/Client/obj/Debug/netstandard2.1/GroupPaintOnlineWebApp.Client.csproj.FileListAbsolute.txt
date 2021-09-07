@@ -1660,6 +1660,6 @@ C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebA
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\brS4kX7v7bK5QHvD3m28MWueZWLhM2-Redb9wvgCLAI=.hash
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\gpGx-kcwHvrGMzU7HxfsN23ELcQ0PMxLfUBBvqnq5lY=.hash
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\uM5LqvkXELZNdn9kPX3LAZ4SS6n5ltNLMYU9DD1IVlQ=.hash
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\u_eTxbEK00W5rEm0Pjxv7RiBbXQa0G-LpnRxmAnZz0U=.hash
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\Zia6yyD17W1TDBkF-Cv3swq6IwoySECviUZL0Z70lwU=.hash
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\WAnmDmiEqagWd_piXOarQUmEIDBAcq35rkKHAzWRx14=.hash
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\15byixIRWsT89y7Ulw0cWpdo0KDKqamPVTPKSMaZA7k=.hash
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\Jrf_zZubL4_9R6tWtxkVzo3DRhDbeKtFCSa1lSIU2nE=.hash
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\hEGAOnl5JbmLXavX1tmCM9rsCmr0hWzptSxSCjgISuE=.hash

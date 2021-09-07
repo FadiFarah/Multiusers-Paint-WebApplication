@@ -6,7 +6,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
-      "GroupPaintOnlineWebApp.Client.dll": "sha256-u+eTxbEK00W5rEm0Pjxv7RiBbXQa0G\/LpnRxmAnZz0U=",
+      "GroupPaintOnlineWebApp.Client.dll": "sha256-15byixIRWsT89y7Ulw0cWpdo0KDKqamPVTPKSMaZA7k=",
       "System.Text.Json.dll": "sha256-M1pYQBRnwZmTq5CodeZxTzsPoWvxBmTSTyy3y0pe8P0=",
       "System.Runtime.CompilerServices.Unsafe.dll": "sha256-kL\/omZDwqByAi+lPdMeDmr3XjHcn4RVb+LmZ4mut1Yc=",
       "mscorlib.dll": "sha256-BaZPMj95+YNe3G4ckTGD6szZFwZeA2MOHn91zTGKDeU=",
@@ -50,9 +50,9 @@
       "GroupPaintOnlineWebApp.Shared.dll": "sha256-gpGx\/kcwHvrGMzU7HxfsN23ELcQ0PMxLfUBBvqnq5lY=",
       "System.ComponentModel.Annotations.dll": "sha256-tmnkCmP9OzLUkpQ3LP7PRosi7gt5pyfEZCM6aqAokFI=",
       "System.ComponentModel.DataAnnotations.dll": "sha256-LIfCYwg+PHltTK4z3EnbSkA7m2cn8JS4jHVthdKrDF8=",
+      "Microsoft.AspNetCore.Components.Forms.dll": "sha256-m7Q+cF5\/ji3OMfdGlCuE8pQ\/iM+kxNHLq\/IEWVvIaOg=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-4NUQ26HmvXRi8smc0jz9940OUECDLQnoMWQLrMLe0ok=",
       "Microsoft.AspNetCore.Metadata.dll": "sha256-825GQI5nG1C1WqLD1SNKSpjzLCNbH2\/KChgjBL0SSXI=",
-      "Microsoft.AspNetCore.Components.Forms.dll": "sha256-m7Q+cF5\/ji3OMfdGlCuE8pQ\/iM+kxNHLq\/IEWVvIaOg=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-bSgsT2x5xMvs8mara5wU+EJwcyHa9GVMU85HwhWcdWM=",
       "Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll": "sha256-AbWZIV0k4GOA+qT6O3719kiJxV5XbyEXKBWjy7wE8w4=",
       "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-5lY1KL\/pA7kS\/OYycrkrhkXJKFHJHVbdmUTyPYaqDiM=",
@@ -67,7 +67,7 @@
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-czNf3btAeBW\/vvID5LAfgcsNZ+GM3ssVuPaMflcg0rs="
     },
     "pdb": {
-      "GroupPaintOnlineWebApp.Client.pdb": "sha256-Zia6yyD17W1TDBkF\/Cv3swq6IwoySECviUZL0Z70lwU=",
+      "GroupPaintOnlineWebApp.Client.pdb": "sha256-Jrf+zZubL4+9R6tWtxkVzo3DRhDbeKtFCSa1lSIU2nE=",
       "Blazor.Extensions.Canvas.pdb": "sha256-JF8vHi8kiD5tbiHU7xq5dwocqi8F+YLLiHsCS\/v4Ks0=",
       "GroupPaintOnlineWebApp.Shared.pdb": "sha256-uM5LqvkXELZNdn9kPX3LAZ4SS6n5ltNLMYU9DD1IVlQ="
     },
