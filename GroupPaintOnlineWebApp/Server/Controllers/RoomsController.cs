@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GroupPaintOnlineWebApp.Server.Data;
 using GroupPaintOnlineWebApp.Shared;
+using GroupPaintOnlineWebApp.Shared.HUBServices.HUBAbstracts;
 
 namespace GroupPaintOnlineWebApp.Server.Controllers
 {
@@ -15,10 +16,12 @@ namespace GroupPaintOnlineWebApp.Server.Controllers
     public class RoomsController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly IRoomsListHub _roomsListHubContext;
 
-        public RoomsController(ApplicationDbContext context)
+        public RoomsController(ApplicationDbContext context, IRoomsListHub roomsListHubContext)
         {
             _context = context;
+            _roomsListHubContext = roomsListHubContext;
         }
 
         // GET: api/Rooms
@@ -110,7 +113,7 @@ namespace GroupPaintOnlineWebApp.Server.Controllers
                     throw;
                 }
             }
-
+            await _roomsListHubContext.RoomCreated(room);
             return CreatedAtAction("GetRoom", new { id = room.Id }, room);
         }
 

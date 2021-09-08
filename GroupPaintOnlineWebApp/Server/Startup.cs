@@ -1,5 +1,7 @@
 using GroupPaintOnlineWebApp.Server.Data;
 using GroupPaintOnlineWebApp.Server.Models;
+using GroupPaintOnlineWebApp.Shared.HUBServices;
+using GroupPaintOnlineWebApp.Shared.HUBServices.HUBAbstracts;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components.Authorization;
@@ -42,6 +44,8 @@ namespace GroupPaintOnlineWebApp.Server
             services.AddAuthentication()
                 .AddIdentityServerJwt();
 
+            services.AddSingleton<IRoomsListHub, RoomsListHub>();
+            services.AddSignalR();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
@@ -74,6 +78,7 @@ namespace GroupPaintOnlineWebApp.Server
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapHub<IRoomsListHub>("/roomsListHub");
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
                 endpoints.MapFallbackToFile("index.html");

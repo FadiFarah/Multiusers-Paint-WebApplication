@@ -1,6 +1,8 @@
 ﻿using GroupPaintOnlineWebApp.Shared;
+using GroupPaintOnlineWebApp.Shared.HUBServices;
 using GroupPaintOnlineWebApp.Shared.Services.ServicesInterfaces;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -19,10 +21,34 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
         public NavigationManager NavManager { get; set; }
 
         public Room Room { get; set; }
-        protected override void OnInitialized()
+        private HubConnection Connection { get; set; }
+
+        private RoomsListHub RoomsListHub { get; set; }
+
+
+        protected async override Task OnInitializedAsync()
         {
             Room = new Room();
+            RoomsListHub = new RoomsListHub();
+            await ConnectToServer();
         }
+
+        private async Task ConnectToServer()
+        {
+            Connection = new HubConnectionBuilder().WithUrl(RoomsListHub.URL + "/roomsListHub").Build();
+            await Connection.StartAsync();
+            RoomsListHub.ConnectionStatus = "Connected!";
+            Console.WriteLine(RoomsListHub.ConnectionStatus);
+
+            Connection.Closed += async (s) =>
+            {
+                RoomsListHub.ConnectionStatus = "Disconnected";
+                Console.WriteLine(RoomsListHub.ConnectionStatus);
+                await Connection.StartAsync();
+            };
+
+        }
+
         public async Task HandleValidSubmit()
         {
             Console.WriteLine(Room.RoomName + " " + Room.IsPublic + " " + Room.Password);
@@ -38,5 +64,9 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
                 NavManager.NavigateTo("/createroom");
             }
         }
+
+
+
+        
     }
 }
