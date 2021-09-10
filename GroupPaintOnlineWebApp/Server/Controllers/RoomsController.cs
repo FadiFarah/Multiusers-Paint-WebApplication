@@ -87,7 +87,7 @@ namespace GroupPaintOnlineWebApp.Server.Controllers
                     throw;
                 }
             }
-
+            await _roomsListHubContext.RoomUpdated();
             return NoContent();
         }
 
@@ -113,7 +113,7 @@ namespace GroupPaintOnlineWebApp.Server.Controllers
                     throw;
                 }
             }
-            await _roomsListHubContext.RoomCreated(room);
+            await _roomsListHubContext.RoomCreated();
             return CreatedAtAction("GetRoom", new { id = room.Id }, room);
         }
 
@@ -130,6 +130,7 @@ namespace GroupPaintOnlineWebApp.Server.Controllers
             _context.Room.Remove(room);
             await _context.SaveChangesAsync();
 
+            await _roomsListHubContext.RoomDeleted();
             return room;
         }
 

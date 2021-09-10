@@ -1,5 +1,4 @@
 ﻿using GroupPaintOnlineWebApp.Shared;
-using GroupPaintOnlineWebApp.Shared.HUBServices;
 using GroupPaintOnlineWebApp.Shared.Services.ServicesInterfaces;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
@@ -22,28 +21,28 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
 
         public Room Room { get; set; }
         private HubConnection Connection { get; set; }
-
-        private RoomsListHub RoomsListHub { get; set; }
+        public string URL { get; set; }
+        public string ConnectionStatus { get; set; }
 
 
         protected async override Task OnInitializedAsync()
         {
             Room = new Room();
-            RoomsListHub = new RoomsListHub();
             await ConnectToServer();
         }
 
         private async Task ConnectToServer()
         {
-            Connection = new HubConnectionBuilder().WithUrl(RoomsListHub.URL + "/roomsListHub").Build();
+            URL = "https://localhost:44301";
+            Connection = new HubConnectionBuilder().WithUrl(URL + "/roomsListHub").Build();
             await Connection.StartAsync();
-            RoomsListHub.ConnectionStatus = "Connected!";
-            Console.WriteLine(RoomsListHub.ConnectionStatus);
+            ConnectionStatus = "Connected!";
+            Console.WriteLine(ConnectionStatus);
 
             Connection.Closed += async (s) =>
             {
-                RoomsListHub.ConnectionStatus = "Disconnected";
-                Console.WriteLine(RoomsListHub.ConnectionStatus);
+                ConnectionStatus = "Disconnected";
+                Console.WriteLine(ConnectionStatus);
                 await Connection.StartAsync();
             };
 
@@ -53,7 +52,6 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
         {
             Console.WriteLine(Room.RoomName + " " + Room.IsPublic + " " + Room.Password);
             Room.Id = Guid.NewGuid().ToString();
-            Room.CurrentUsers = 1;
             var response = await RoomService.PostRoom(Room);
             if (response.StatusCode == HttpStatusCode.Created)
             {

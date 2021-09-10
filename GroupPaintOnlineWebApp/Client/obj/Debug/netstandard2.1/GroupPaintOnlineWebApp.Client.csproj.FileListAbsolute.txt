@@ -1738,9 +1738,6 @@ C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebA
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Microsoft.AspNetCore.SignalR.Client.Core.dll
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.Threading.Channels.dll
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Microsoft.AspNetCore.SignalR.Core.dll
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.Reflection.Emit.ILGeneration.dll
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.Reflection.Emit.dll
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Microsoft.AspNetCore.SignalR.Client.dll.gz
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Microsoft.AspNetCore.SignalR.Common.dll.gz
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Microsoft.AspNetCore.Connections.Abstractions.dll.gz
@@ -1751,9 +1748,6 @@ C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebA
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Microsoft.AspNetCore.SignalR.Client.Core.dll.gz
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Microsoft.AspNetCore.SignalR.Protocols.Json.dll.gz
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.Threading.Channels.dll.gz
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Microsoft.AspNetCore.SignalR.Core.dll.gz
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.Reflection.Emit.ILGeneration.dll.gz
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.Reflection.Emit.dll.gz
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\Microsoft.AspNetCore.Authentication.Abstractions.dll
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\Microsoft.AspNetCore.Authorization.Policy.dll
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\Microsoft.AspNetCore.Hosting.Abstractions.dll
@@ -1786,9 +1780,6 @@ C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebA
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\A-8xYNOvvbmCwBBZrQPXZWUaMc5ZzfZnXZk-A50-A64=.hash
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\CcuzNQKTMz19zaLB0TK0FTsxUH_CBV3i3grmBvxYJwE=.hash
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\bVX8kcaBVhKUpt_hf82y3fnm2N9FfxgMCsWN_4XPaYc=.hash
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\CdRY0PKWrFtZH5LQgn_FiQljfF0bbIDa6mv7n_pH8Ww=.hash
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\yTznKFXYjwtGYUGUdxYEw8gA1A_IWlMYOncOmAAyJas=.hash
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\4A297N6Xf0UZNMTrY_4COe43Hmcrtxb-eTiqTJ5M6wA=.hash
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.AspNetCore.SignalR.Client.dll.gz
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.AspNetCore.SignalR.Common.dll.gz
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.AspNetCore.Connections.Abstractions.dll.gz
@@ -1799,9 +1790,6 @@ C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebA
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.AspNetCore.SignalR.Client.Core.dll.gz
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.AspNetCore.SignalR.Protocols.Json.dll.gz
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Threading.Channels.dll.gz
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.AspNetCore.SignalR.Core.dll.gz
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Reflection.Emit.ILGeneration.dll.gz
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Reflection.Emit.dll.gz
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.AspNetCore.SignalR.Client.dll.br
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.AspNetCore.SignalR.Common.dll.br
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.AspNetCore.Connections.Abstractions.dll.br
@@ -1812,11 +1800,8 @@ C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebA
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.AspNetCore.SignalR.Client.Core.dll.br
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.AspNetCore.SignalR.Protocols.Json.dll.br
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Threading.Channels.dll.br
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.AspNetCore.SignalR.Core.dll.br
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Reflection.Emit.ILGeneration.dll.br
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Reflection.Emit.dll.br
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\91DOLiUusnHKwQ8b-zj0VIhttjHpwKc74pe4Jf7wYxI=.hash
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\lgjY1gnuO0KfMRM0Dct6gneHLsp2l0tsQPQMqBbjv-M=.hash
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\opCcf9lBCJBa1SLDwsrOeY2YCjmq312cm5qK1xEE4h8=.hash
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\eA63cF9BFxgBaQDjicvNKbjHVuPP97u8eiVnw_542Co=.hash
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\hI16vfjKWRTKbfgwuRB3ZhrSG4Bllw1E1IU3TkUoPiQ=.hash
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\_G8HxhpYa6BRtZadm2hC35947IIGoJTcPY_EwTNaFjs=.hash
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\3qT8cTvgr47vlkexAY2JpuaUdqAAGzCUj-moA5gmxfY=.hash
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\GOXiJYuFYJcAyBTXtxQVm6zP7GAbelD2IOeGJc7Eed0=.hash
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\Xc9qH966vKAe_NGPUNWUdx2ightv9ZgRsbv_uW2n9Os=.hash
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\2HgOzj0ntRbHpxbsz2s9WK1tr5-e8lhfSXTtfSQawjU=.hash

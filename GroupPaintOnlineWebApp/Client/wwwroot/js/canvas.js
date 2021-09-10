@@ -1,6 +1,5 @@
-﻿var counter = 1;
-function onInitialized(){
-        console.log(counter);
+﻿
+window.onInitialized = function() {
         var canvas = document.querySelector('canvas');
         if (canvas != null) {
 

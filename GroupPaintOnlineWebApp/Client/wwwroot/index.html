@@ -23,6 +23,10 @@
     <script src="_framework/blazor.webassembly.js"></script>
     <script src="/js/canvas.js"></script>
     <script>
+        window.alla = function () {
+            console.log("alla");
+            return 1;
+        }
         window.getWindowDimensions = function () {
             return {
                 width: window.innerWidth,
