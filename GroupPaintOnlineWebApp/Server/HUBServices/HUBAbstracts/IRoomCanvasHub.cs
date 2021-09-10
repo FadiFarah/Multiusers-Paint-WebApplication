@@ -10,6 +10,6 @@ namespace GroupPaintOnlineWebApp.Shared.HUBServices.HUBAbstracts
     {
         public abstract Task AddToGroup(string groupName, string connectionId);
         public abstract Task RemoveFromGroup(string groupName, string connectionId);
-
+        public abstract Task SendContext(string imageURL, string roomId);
     }
 }

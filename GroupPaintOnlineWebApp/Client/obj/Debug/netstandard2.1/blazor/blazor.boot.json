@@ -6,7 +6,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
-      "GroupPaintOnlineWebApp.Client.dll": "sha256-GOXiJYuFYJcAyBTXtxQVm6zP7GAbelD2IOeGJc7Eed0=",
+      "GroupPaintOnlineWebApp.Client.dll": "sha256-CbQqawvFGemSVl1w2hzZW2E6MeQRIey+lcZ5Rbk6aWk=",
       "System.Text.Json.dll": "sha256-U7bRy05wcVRmBo6we7M8gTMCbJTfvEYUVP\/aO4W\/4ZA=",
       "System.Runtime.CompilerServices.Unsafe.dll": "sha256-kL\/omZDwqByAi+lPdMeDmr3XjHcn4RVb+LmZ4mut1Yc=",
       "mscorlib.dll": "sha256-BaZPMj95+YNe3G4ckTGD6szZFwZeA2MOHn91zTGKDeU=",
@@ -89,7 +89,7 @@
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-czNf3btAeBW\/vvID5LAfgcsNZ+GM3ssVuPaMflcg0rs="
     },
     "pdb": {
-      "GroupPaintOnlineWebApp.Client.pdb": "sha256-Xc9qH966vKAe+NGPUNWUdx2ightv9ZgRsbv+uW2n9Os=",
+      "GroupPaintOnlineWebApp.Client.pdb": "sha256-cne6bnAaHRA\/RLPLPHdlvMlnBSo42zkM0hAyJPgustQ=",
       "Blazor.Extensions.Canvas.pdb": "sha256-JF8vHi8kiD5tbiHU7xq5dwocqi8F+YLLiHsCS\/v4Ks0=",
       "GroupPaintOnlineWebApp.Shared.pdb": "sha256-3qT8cTvgr47vlkexAY2JpuaUdqAAGzCUj\/moA5gmxfY="
     },

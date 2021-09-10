@@ -17,13 +17,10 @@ namespace GroupPaintOnlineWebApp.Shared.HUBServices
     {
         private static Dictionary<string, List<string>> OnlineClientsInGroups= new Dictionary<string, List<string>>();
 
-        public static RoomService roomService;
 
         private readonly RoomsController _roomsController;
-        private readonly ApplicationDbContext _applicationDbContext;
-        public RoomCanvasHub(ApplicationDbContext applicationDbContext, RoomsController roomsController)
+        public RoomCanvasHub(RoomsController roomsController)
         {
-            _applicationDbContext = applicationDbContext;
             _roomsController = roomsController;
         }
         public override async Task OnConnectedAsync()
@@ -78,6 +75,11 @@ namespace GroupPaintOnlineWebApp.Shared.HUBServices
         {
             Console.WriteLine("User Removed from Group");
             await Groups.RemoveFromGroupAsync(connectionId, roomId);
+        }
+
+        public override async Task SendContext(string imageURL,string roomId)
+        {
+            await Clients.Group(roomId).SendAsync("ReceiveContext", imageURL, Context.ConnectionId);
         }
 
     }

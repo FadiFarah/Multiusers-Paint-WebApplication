@@ -49,7 +49,10 @@ namespace GroupPaintOnlineWebApp.Server
             services.AddSingleton<IRoomsListHub, RoomsListHub>();
             services.AddTransient<IRoomCanvasHub, RoomCanvasHub>();
             services.AddScoped<RoomsController>();
-            services.AddSignalR();
+            services.AddSignalR(o => {
+                o.EnableDetailedErrors = true;
+                o.MaximumReceiveMessageSize = null;
+            });
             services.AddControllersWithViews();
             services.AddRazorPages();
         }

@@ -34,19 +34,21 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
         [Parameter]
         public string Password { get; set; }
 
+        //Hub Connection Related Properties
         private HubConnection Connection { get; set; }
-        public BECanvasComponent CanvasReference { get; set; }
-
-        public int Height { get; set; }
-        public int Width { get; set; }
         public string URL { get; set; }
         public string ConnectionStatus { get; set; }
-        public Room Room { get; set; }
+
+        //Canvas Related Properties
+        public int Height { get; set; }
+        public int Width { get; set; }
+        public bool IsPainting { get; set; }
+        public string ImageURL { get; set; }
+
 
 
         protected override async Task OnInitializedAsync()
         {
-            
             var response = await RoomService.GetRoom(Id);
             if (response.StatusCode == HttpStatusCode.NotFound)
             {
@@ -61,7 +63,6 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
                 }
                 else
                 {
-                    Room = room.Result;
                     var dimension = await JsRuntime.InvokeAsync<WindowDimension>("getWindowDimensions");
                     await JsRuntime.InvokeVoidAsync("onInitialized");
                     Height = dimension.Height;
@@ -70,7 +71,6 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
                     
                 }
             }
-
         }
 
         private async Task ConnectToServer()
@@ -98,6 +98,29 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
                 Console.WriteLine("User Disconnected");
                 await Connection.InvokeAsync("RemoveFromGroup", Id, connectionId);
             });
+            Connection.On<string,string>("ReceiveContext", async (imageURL, connectionId) =>
+            {
+                if(connectionId!=Connection.ConnectionId)
+                {
+                    await JsRuntime.InvokeAsync<string>("drawImage", imageURL);
+                }
+            });
+        }
+
+        public void CanvasOnMouseDown()
+        {
+            IsPainting = true;
+        }
+
+        public async Task CanvasOnMouseUp()
+        {
+            IsPainting = false;
+            ImageURL = await JsRuntime.InvokeAsync<string>("getNewImage");
+            await Connection.InvokeAsync("SendContext", ImageURL, Id);
+        }
+        public void CanvasOnMouseOut()
+        {
+            IsPainting = false;
         }
 
         public class WindowDimension
