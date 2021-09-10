@@ -32,7 +32,17 @@ namespace GroupPaintOnlineWebApp.Shared.Services
 
         public async Task<HttpResponseMessage> PostRoom(Room room)
         {
-            return await httpClient.PostAsJsonAsync<Room>("api/Rooms",room);
+            return await httpClient.PostAsJsonAsync("api/Rooms",room);
+        }
+
+        public async Task<HttpResponseMessage> PutRoom(string id, Room room)
+        {
+            return await httpClient.PutAsJsonAsync("api/Rooms/"+id, room);
+        }
+
+        public async Task<HttpResponseMessage> DeleteRoom(string id)
+        {
+            return await httpClient.DeleteAsync("api/Rooms/"+id);
         }
     }
 }

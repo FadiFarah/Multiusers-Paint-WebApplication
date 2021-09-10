@@ -89,6 +89,22 @@ using GroupPaintOnlineWebApp.Client.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 26 "C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\Shared\NavBar.razor"
+      
+    void RoomsListNavigation()
+    {
+        NavManager.NavigateTo("/roomslist",true);
+    }
+    void IndexNavigation()
+    {
+        NavManager.NavigateTo("/", true);
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
     }
 }
 #pragma warning restore 1591

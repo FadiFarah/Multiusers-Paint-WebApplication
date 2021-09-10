@@ -1,10 +1,9 @@
-﻿var counter = 1;
-function onInitialized(){
-        console.log(counter);
+﻿
+window.onInitialized = function() {
         var canvas = document.querySelector('canvas');
         if (canvas != null) {
 
-            const context = canvas.getContext('2d');
+            var context = canvas.getContext('2d');
 
             //elements
             var eraser = document.querySelector('#eraser');
@@ -89,6 +88,21 @@ function onInitialized(){
     
         }
 
+}
+window.getNewImage = function () {
+    var canvas = document.querySelector('canvas');
+    var dataURL = canvas.toDataURL();
+    return dataURL;
+}
+window.drawImage = function (imageURL) {
+    var canvas = document.querySelector('canvas');
+    var context = canvas.getContext("2d");
+    var img = new Image();
+    img.src = imageURL;
+    img.onload = () => {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.drawImage(img, 0, 0, canvas.width, canvas.height);
+    }
 }
 
 
