@@ -44,7 +44,8 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
         public int Width { get; set; }
         public bool IsPainting { get; set; }
         public string ImageURL { get; set; }
-
+        public string DisplayOtherBox { get; set; }
+        public string DisplayChatBox { get; set; }
 
 
         protected override async Task OnInitializedAsync()
@@ -63,6 +64,8 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
                 }
                 else
                 {
+                    DisplayOtherBox = "none";
+                    DisplayChatBox = "none";
                     var dimension = await JsRuntime.InvokeAsync<WindowDimension>("getWindowDimensions");
                     await JsRuntime.InvokeVoidAsync("onInitialized");
                     Height = dimension.Height;
@@ -121,6 +124,21 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
         public void CanvasOnMouseOut()
         {
             IsPainting = false;
+        }
+
+        public void OtherButtonClick()
+        {
+            if (DisplayOtherBox == "none")
+                DisplayOtherBox = "block";
+            else
+                DisplayOtherBox = "none";
+        }
+        public void ChatButtonClick()
+        {
+            if (DisplayChatBox == "none")
+                DisplayChatBox = "block";
+            else
+                DisplayChatBox = "none";
         }
 
         public class WindowDimension
