@@ -19,5 +19,6 @@ namespace GroupPaintOnlineWebApp.Server.Data
         {
         }
         public DbSet<GroupPaintOnlineWebApp.Shared.Room> Room { get; set; }
+        public DbSet<GroupPaintOnlineWebApp.Shared.Painting> Painting { get; set; }
     }
 }

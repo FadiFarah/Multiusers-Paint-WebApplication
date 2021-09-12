@@ -40,6 +40,8 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
         private HubConnection Connection { get; set; }
         public string URL { get; set; }
         public string ConnectionStatus { get; set; }
+
+        //Chat Related Properties
         public List<string> ChatMessages { get; set; }
         public string ChatInput { get; set; }
 

@@ -1,7 +1,7 @@
 {
   "FilesToCompress": [
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\dEiCFQKWDGDKhRHEtzshib0EAftZbQV8LzbylQ73RoE=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\jw66eeHkAY_f1Dflizu39vpxuiBn5vhaLmQjTabQyF4=.hash",
       "Source": "C:\\Users\\fadif\\source\\repos\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\GroupPaintOnlineWebApp.Client.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/GroupPaintOnlineWebApp.Client.dll.gz"
     },
@@ -316,7 +316,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.Extensions.Http.dll.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\obNJcIsGPW0mxjDL_Oyi4NPHfy76GK7di3fKk26QIDI=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\M5ocgVraZT989pMjWU4QaPpzrzMX6MMutgXtM9ZMWE0=.hash",
       "Source": "C:\\Users\\fadif\\source\\repos\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\GroupPaintOnlineWebApp.Shared.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/GroupPaintOnlineWebApp.Shared.dll.gz"
     },
@@ -406,7 +406,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.JSInterop.WebAssembly.dll.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\aARatQeY0vLbVZMlyJIkC0FV-9LOymaflRDbk9HRteA=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\zCunzNY_23q1wnDstnPmfXBq9oAF0-BtpwmESWBuEpQ=.hash",
       "Source": "C:\\Users\\fadif\\source\\repos\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\GroupPaintOnlineWebApp.Client.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/GroupPaintOnlineWebApp.Client.pdb.gz"
     },
@@ -416,7 +416,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Blazor.Extensions.Canvas.pdb.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\jzyrjnoLMVzfz6eRTvagNQg-yBVjdhBtbiwpkZfae24=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\jbjqg6o5iAbsvCuXpKVKam9hnHG1AOHuV2WVwxLrRdQ=.hash",
       "Source": "C:\\Users\\fadif\\source\\repos\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\GroupPaintOnlineWebApp.Shared.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/GroupPaintOnlineWebApp.Shared.pdb.gz"
     },
@@ -441,7 +441,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.webassembly.js.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\VXD2_LTwvh9TtDOG1SARYZNFVkbDQokAGmynxNfQg4Y=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\bitRyqNRcWZ7V0A-pVjGhBd17MBUH3AJ6SiManYypEw=.hash",
       "Source": "C:\\Users\\fadif\\source\\repos\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Client\\obj\\Debug\\netstandard2.1\\blazor\\blazor.boot.json",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.boot.json.gz"
     }
