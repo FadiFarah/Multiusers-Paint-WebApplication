@@ -90,5 +90,9 @@ namespace GroupPaintOnlineWebApp.Shared.HUBServices
             await Clients.Group(roomId).SendAsync("ReceiveContext", imageURL, Context.ConnectionId);
         }
 
+        public override async Task SendChatMessage(string message, string roomId)
+        {
+            await Clients.Group(roomId).SendAsync("ReceiveChatMessage", message);
+        }
     }
 }

@@ -6,7 +6,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
-      "GroupPaintOnlineWebApp.Client.dll": "sha256-nbg\/j66BZM2IWXVUey0TybRxiihxK8VssuSvBI7seiU=",
+      "GroupPaintOnlineWebApp.Client.dll": "sha256-dEiCFQKWDGDKhRHEtzshib0EAftZbQV8LzbylQ73RoE=",
       "Microsoft.AspNetCore.SignalR.Client.dll": "sha256-BodEYHOc5Lcr9NlsefBSp0aVUq1Z7zCGteE73iRv29E=",
       "Microsoft.Extensions.DependencyInjection.Abstractions.dll": "sha256-D9y5RXbA\/sEzwk6cnGbGMKQv87bvOEEVycrLUTe0lGU=",
       "netstandard.dll": "sha256-\/zcPVM75OAY+joGVM8yIC1gO1SFYWP1CFERgQ8PJkfA=",
@@ -64,11 +64,11 @@
       "System.Resources.ResourceManager.dll": "sha256-U4q43ZeuBEBaCygKJwr18fjDYwnFv22MHuvMVqnpNzI=",
       "System.Runtime.dll": "sha256-6CpyRQAYrVPJfNYBKH0K9lWX+rNPO15lwNhGHPmvxtk=",
       "System.Threading.Channels.dll": "sha256-bVX8kcaBVhKUpt+hf82y3fnm2N9FfxgMCsWN+4XPaYc=",
-      "System.Net.Http.Json.dll": "sha256-brS4kX7v7bK5QHvD3m28MWueZWLhM2\/Redb9wvgCLAI=",
-      "Microsoft.Extensions.Http.dll": "sha256-fXppSpNZWwDJhYYWU+uQSwXoC5Krwc+3mqRwKJz0FHY=",
       "Blazor.Extensions.Canvas.dll": "sha256-W20pWMXQg2yTv0w4VJhrjCJKNRYe3PiUU9S76XipNe8=",
       "Microsoft.JSInterop.dll": "sha256-LqwA2Rpm96Ualk0IhLZar87kfRCyKHzHTeTt2jYhm7M=",
       "Microsoft.AspNetCore.Components.dll": "sha256-PEg9ghiKSWBTX0jq8pFDvv2Yvw92Y8W0ELtWrSE4fhA=",
+      "System.Net.Http.Json.dll": "sha256-brS4kX7v7bK5QHvD3m28MWueZWLhM2\/Redb9wvgCLAI=",
+      "Microsoft.Extensions.Http.dll": "sha256-fXppSpNZWwDJhYYWU+uQSwXoC5Krwc+3mqRwKJz0FHY=",
       "GroupPaintOnlineWebApp.Shared.dll": "sha256-obNJcIsGPW0mxjDL+Oyi4NPHfy76GK7di3fKk26QIDI=",
       "System.ComponentModel.Annotations.dll": "sha256-tmnkCmP9OzLUkpQ3LP7PRosi7gt5pyfEZCM6aqAokFI=",
       "System.ComponentModel.DataAnnotations.dll": "sha256-LIfCYwg+PHltTK4z3EnbSkA7m2cn8JS4jHVthdKrDF8=",
@@ -89,7 +89,7 @@
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-czNf3btAeBW\/vvID5LAfgcsNZ+GM3ssVuPaMflcg0rs="
     },
     "pdb": {
-      "GroupPaintOnlineWebApp.Client.pdb": "sha256-LJDBrHHWf0gSwCiGMefVyGMZe9otxa8A3mg3baJGkEE=",
+      "GroupPaintOnlineWebApp.Client.pdb": "sha256-aARatQeY0vLbVZMlyJIkC0FV\/9LOymaflRDbk9HRteA=",
       "Blazor.Extensions.Canvas.pdb": "sha256-JF8vHi8kiD5tbiHU7xq5dwocqi8F+YLLiHsCS\/v4Ks0=",
       "GroupPaintOnlineWebApp.Shared.pdb": "sha256-jzyrjnoLMVzfz6eRTvagNQg\/yBVjdhBtbiwpkZfae24="
     },

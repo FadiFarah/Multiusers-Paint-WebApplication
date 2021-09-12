@@ -56,11 +56,11 @@ obj\Debug\netstandard2.1\blazor\unlinked\System.Diagnostics.Tracing.dll
 obj\Debug\netstandard2.1\blazor\unlinked\System.Resources.ResourceManager.dll
 obj\Debug\netstandard2.1\blazor\unlinked\System.Runtime.dll
 obj\Debug\netstandard2.1\blazor\unlinked\System.Threading.Channels.dll
-obj\Debug\netstandard2.1\blazor\unlinked\System.Net.Http.Json.dll
-obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Http.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Blazor.Extensions.Canvas.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.JSInterop.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.AspNetCore.Components.dll
+obj\Debug\netstandard2.1\blazor\unlinked\System.Net.Http.Json.dll
+obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Http.dll
 obj\Debug\netstandard2.1\blazor\unlinked\GroupPaintOnlineWebApp.Shared.dll
 obj\Debug\netstandard2.1\blazor\unlinked\System.ComponentModel.Annotations.dll
 obj\Debug\netstandard2.1\blazor\unlinked\System.ComponentModel.DataAnnotations.dll

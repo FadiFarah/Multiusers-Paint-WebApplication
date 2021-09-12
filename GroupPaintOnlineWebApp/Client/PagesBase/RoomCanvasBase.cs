@@ -1,7 +1,8 @@
 ﻿using Blazor.Extensions;
 using Blazor.Extensions.Canvas.Canvas2D;
 using GroupPaintOnlineWebApp.Shared;
-
+using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using GroupPaintOnlineWebApp.Shared.Services;
 using GroupPaintOnlineWebApp.Shared.Services.ServicesInterfaces;
 using Microsoft.AspNetCore.Components;
@@ -39,6 +40,8 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
         private HubConnection Connection { get; set; }
         public string URL { get; set; }
         public string ConnectionStatus { get; set; }
+        public List<string> ChatMessages { get; set; }
+        public string ChatInput { get; set; }
 
         //Canvas Related Properties
         public int Height { get; set; }
@@ -65,6 +68,7 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
                 }
                 else
                 {
+                    ChatMessages = new List<string>();
                     DisplayOtherBox = "none";
                     DisplayChatBox = "none";
                     var dimension = await JsRuntime.InvokeAsync<WindowDimension>("getWindowDimensions");
@@ -109,6 +113,11 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
                     await JsRuntime.InvokeAsync<string>("drawImage", imageURL);
                 }
             });
+            Connection.On<string>("ReceiveChatMessage", (message) =>
+            {
+                ChatMessages.Add(message);
+                StateHasChanged();
+            });
         }
 
         public void CanvasOnMouseDown()
@@ -136,10 +145,19 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
         }
         public void ChatButtonClick()
         {
-            if (DisplayChatBox == "none")
-                DisplayChatBox = "block";
-            else
-                DisplayChatBox = "none";
+            DisplayChatBox = "block";
+        }
+        public void CloseChatBox()
+        {
+            DisplayChatBox = "none";
+        }
+        public void OnEnterPress(KeyboardEventArgs e, string userName)
+        {
+            if(e.Code=="Enter" || e.Code == "NumpadEnter")
+            {
+                Connection.InvokeAsync("SendChatMessage",userName.Substring(0,userName.IndexOf("@"))+ " says: " + ChatInput, Id);
+                ChatInput = "";
+            }
         }
 
         public class WindowDimension
