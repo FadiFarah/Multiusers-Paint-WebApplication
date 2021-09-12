@@ -1784,11 +1784,6 @@ C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebA
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.AspNetCore.SignalR.Client.Core.dll.br
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.AspNetCore.SignalR.Protocols.Json.dll.br
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Threading.Channels.dll.br
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\_G8HxhpYa6BRtZadm2hC35947IIGoJTcPY_EwTNaFjs=.hash
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\3qT8cTvgr47vlkexAY2JpuaUdqAAGzCUj-moA5gmxfY=.hash
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\CbQqawvFGemSVl1w2hzZW2E6MeQRIey_lcZ5Rbk6aWk=.hash
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\cne6bnAaHRA-RLPLPHdlvMlnBSo42zkM0hAyJPgustQ=.hash
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\WTtZUv85akVaTi77z4M8TaJ5eZNPfiZFyrJkPlYGI4o=.hash
 D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Microsoft.AspNetCore.SignalR.Client.dll
 D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Microsoft.AspNetCore.SignalR.Common.dll
 D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Microsoft.AspNetCore.Connections.Abstractions.dll
@@ -1949,3 +1944,10 @@ D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\
 D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\I9Mi9eG5TqHEINn8f2174iDq8Q42_wb0vpv3E1LljPM=.hash
 D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\ir4-dgyhHgQuu40rL8yk2yqnRDQAaX9is3c2P5UpUEI=.hash
 D:\DISK\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\bB4pAotF9H_Tlr8NYHR36f4luLQHGa7blFtPmNpTs-U=.hash
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\PaintingsList.razor.g.cs
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\Razor\Pages\PaintingsList.razor.g.cs
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\nbg-j66BZM2IWXVUey0TybRxiihxK8VssuSvBI7seiU=.hash
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\obNJcIsGPW0mxjDL_Oyi4NPHfy76GK7di3fKk26QIDI=.hash
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\LJDBrHHWf0gSwCiGMefVyGMZe9otxa8A3mg3baJGkEE=.hash
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\jzyrjnoLMVzfz6eRTvagNQg-yBVjdhBtbiwpkZfae24=.hash
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\C2wq_U6jmIBqz6QHfU6goH_fAqRJHdBelgE2DaIlEw4=.hash

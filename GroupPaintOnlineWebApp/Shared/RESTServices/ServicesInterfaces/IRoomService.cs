@@ -10,7 +10,6 @@ namespace GroupPaintOnlineWebApp.Shared.Services.ServicesInterfaces
     {
         Task<IEnumerable<Room>> GetRooms();
         Task<HttpResponseMessage> GetRoom(string id);
-        Task<HttpResponseMessage> GetRoom(string id,string password);
         Task<HttpResponseMessage> PostRoom(Room room);
         Task<HttpResponseMessage> PutRoom(string id, Room room);
         Task<HttpResponseMessage> DeleteRoom(string id);

@@ -46,19 +46,6 @@ namespace GroupPaintOnlineWebApp.Server.Controllers
             return room;
         }
 
-        [HttpGet("{id}/{password}")]
-        public async Task<ActionResult<Room>> GetRoom(string id,string password)
-        {
-            var room = await _context.Room.FindAsync(id);
-
-            if (room == null || room.Password!=password)
-            {
-                return NotFound();
-            }
-
-            return room;
-        }
-
         // PUT: api/Rooms/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.

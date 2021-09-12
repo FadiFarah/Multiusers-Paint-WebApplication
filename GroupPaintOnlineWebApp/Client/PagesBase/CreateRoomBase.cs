@@ -20,32 +20,13 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
         public NavigationManager NavManager { get; set; }
 
         public Room Room { get; set; }
-        private HubConnection Connection { get; set; }
         public string URL { get; set; }
         public string ConnectionStatus { get; set; }
 
 
-        protected async override Task OnInitializedAsync()
+        protected override void OnInitialized()
         {
             Room = new Room();
-            await ConnectToServer();
-        }
-
-        private async Task ConnectToServer()
-        {
-            URL = "https://localhost:44301";
-            Connection = new HubConnectionBuilder().WithUrl(URL + "/roomsListHub").Build();
-            await Connection.StartAsync();
-            ConnectionStatus = "Connected!";
-            Console.WriteLine(ConnectionStatus);
-
-            Connection.Closed += async (s) =>
-            {
-                ConnectionStatus = "Disconnected";
-                Console.WriteLine(ConnectionStatus);
-                await Connection.StartAsync();
-            };
-
         }
 
         public async Task HandleValidSubmit()
@@ -55,16 +36,13 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
             var response = await RoomService.PostRoom(Room);
             if (response.StatusCode == HttpStatusCode.Created)
             {
-                NavManager.NavigateTo("/room/" + Room.Id + "/" + Room.Password);
+                NavManager.NavigateTo("/room/" + Room.Id + "/" + Room.Password,true);
             }
             else
             {
                 NavManager.NavigateTo("/createroom");
             }
         }
-
-
-
-        
+      
     }
 }

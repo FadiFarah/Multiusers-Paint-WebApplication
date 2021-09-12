@@ -9,6 +9,10 @@ namespace GroupPaintOnlineWebApp.Shared.HUBServices
 {
     public class RoomsListHub : IRoomsListHub
     {
+        public override async Task OnDisconnectedAsync(Exception exception)
+        {
+            await base.OnDisconnectedAsync(exception);
+        }
         public async override Task RoomCreated()
         {
             await Clients.All.SendAsync("RoomCreation");

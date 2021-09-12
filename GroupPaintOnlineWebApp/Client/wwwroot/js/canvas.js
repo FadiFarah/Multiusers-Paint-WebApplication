@@ -83,7 +83,8 @@ window.onInitialized = function() {
             canvas.height = window.innerHeight - (window.innerHeight / 4);
             paintToolBox.width = window.innerWidth;
             paintToolBox.height = (window.innerHeight / 4);
-            context.putImageData(undo_array[undo_array.length - 1], 0, 0);
+            if (undo_array.length>0)
+                context.putImageData(undo_array[undo_array.length - 1], 0, 0);
         })
     
         }

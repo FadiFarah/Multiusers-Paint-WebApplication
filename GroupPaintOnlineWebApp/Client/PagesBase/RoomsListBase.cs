@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.SignalR.Client;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using System.Net.Http.Json;
 
 namespace GroupPaintOnlineWebApp.Client.PagesBase
 {
@@ -114,26 +116,32 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
         {
             if (editContext.Model is Room)
             {
-                Room r = ((Room)editContext.Model);
-                if (r.IsPublic)
-                {
-                    NavManager.NavigateTo("/room/" + r.Id);
-                }
-                else
-                {
-                    var response = await RoomService.GetRoom(r.Id,r.Password);
+                Room r = (Room)editContext.Model;
+
+                    HttpResponseMessage response;
+                    response = await RoomService.GetRoom(r.Id);
                     if (response.StatusCode == HttpStatusCode.NotFound)
                     {
                         NavManager.NavigateTo("/roomslist");
                     }
                     else
                     {
-                        NavManager.NavigateTo("/room/" + r.Id + "/" + r.Password);
+                    Room room = response.Content.ReadFromJsonAsync<Room>().Result;
+                    if(room.Password!=r.Password)
+                    {
+                        NavManager.NavigateTo("/roomslist");
                     }
-                }
+                    else if(room.Password==r.Password && room.IsPublic==false)
+                            NavManager.NavigateTo("/room/" + r.Id + "/" + r.Password,true);
+                    else if(room.IsPublic==true)
+                       NavManager.NavigateTo("/room/" + r.Id,true);
+                    }
             }
 
-
+        }
+        public void CreateNewButton()
+        {
+            NavManager.NavigateTo("/createroom", true);
         }
 
     }

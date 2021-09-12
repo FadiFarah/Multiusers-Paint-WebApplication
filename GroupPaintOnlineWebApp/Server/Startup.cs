@@ -8,6 +8,7 @@ using GroupPaintOnlineWebApp.Shared.Services.ServicesInterfaces;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
@@ -47,14 +48,15 @@ namespace GroupPaintOnlineWebApp.Server
             services.AddAuthentication()
                 .AddIdentityServerJwt();
             services.AddSingleton<IRoomsListHub, RoomsListHub>();
+            services.AddTransient<RoomsController>();
             services.AddTransient<IRoomCanvasHub, RoomCanvasHub>();
-            services.AddScoped<RoomsController>();
             services.AddSignalR(o => {
                 o.EnableDetailedErrors = true;
                 o.MaximumReceiveMessageSize = null;
             });
             services.AddControllersWithViews();
             services.AddRazorPages();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -82,7 +84,6 @@ namespace GroupPaintOnlineWebApp.Server
             app.UseIdentityServer();
             app.UseAuthentication();
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapHub<IRoomsListHub>("/roomsListHub");

@@ -28,6 +28,7 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
         public NavigationManager NavManager { get; set; }
 
 
+
         //RouteUri Parameters
         [Parameter]
         public string Id { get; set; }
@@ -57,8 +58,8 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
             }
             else
             {
-                var room = response.Content.ReadFromJsonAsync<Room>();
-                if (room.Result.Password != Password)
+                var room = response.Content.ReadFromJsonAsync<Room>().Result;
+                if (room.Password != Password)
                 {
                     NavManager.NavigateTo("/roomslist");
                 }
@@ -71,13 +72,14 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
                     Height = dimension.Height;
                     Width = dimension.Width;
                     await ConnectToServer();
-                    
+
                 }
             }
         }
 
         private async Task ConnectToServer()
         {
+            
             URL = "https://localhost:44301";
             Connection = new HubConnectionBuilder().WithUrl(URL+ "/roomCanvasHub").Build();
             await Connection.StartAsync();
@@ -90,7 +92,6 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
                 Console.WriteLine(ConnectionStatus);
                 await Connection.StartAsync();
             };
-
             Connection.On<string>("UserConnected", async (connectionId) =>
             {
                 Console.WriteLine("User Connected");

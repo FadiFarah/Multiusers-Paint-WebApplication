@@ -10821,19 +10821,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\USER1\\.nuget\\packages\\": {}
+    "C:\\Users\\fadif\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DISK\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Server\\GroupPaintOnlineWebApp.Server.csproj",
+      "projectUniqueName": "C:\\Users\\fadif\\source\\repos\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Server\\GroupPaintOnlineWebApp.Server.csproj",
       "projectName": "GroupPaintOnlineWebApp.Server",
-      "projectPath": "D:\\DISK\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Server\\GroupPaintOnlineWebApp.Server.csproj",
-      "packagesPath": "C:\\Users\\USER1\\.nuget\\packages\\",
-      "outputPath": "D:\\DISK\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Server\\obj\\",
+      "projectPath": "C:\\Users\\fadif\\source\\repos\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Server\\GroupPaintOnlineWebApp.Server.csproj",
+      "packagesPath": "C:\\Users\\fadif\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fadif\\source\\repos\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\USER1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fadif\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10847,11 +10847,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\DISK\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Client\\GroupPaintOnlineWebApp.Client.csproj": {
-              "projectPath": "D:\\DISK\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Client\\GroupPaintOnlineWebApp.Client.csproj"
+            "C:\\Users\\fadif\\source\\repos\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Client\\GroupPaintOnlineWebApp.Client.csproj": {
+              "projectPath": "C:\\Users\\fadif\\source\\repos\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Client\\GroupPaintOnlineWebApp.Client.csproj"
             },
-            "D:\\DISK\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\GroupPaintOnlineWebApp.Shared.csproj": {
-              "projectPath": "D:\\DISK\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\GroupPaintOnlineWebApp.Shared.csproj"
+            "C:\\Users\\fadif\\source\\repos\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\GroupPaintOnlineWebApp.Shared.csproj": {
+              "projectPath": "C:\\Users\\fadif\\source\\repos\\Multiusers-Paint-WebApplication\\GroupPaintOnlineWebApp\\Shared\\GroupPaintOnlineWebApp.Shared.csproj"
             }
           }
         }
@@ -10919,7 +10919,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

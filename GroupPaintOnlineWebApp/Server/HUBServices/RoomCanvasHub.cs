@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 using System.Net.Http.Json;
 using GroupPaintOnlineWebApp.Server.Data;
 using GroupPaintOnlineWebApp.Server.Controllers;
+using System.Threading;
 
 namespace GroupPaintOnlineWebApp.Shared.HUBServices
 {
     public class RoomCanvasHub : IRoomCanvasHub
     {
         private static Dictionary<string, List<string>> OnlineClientsInGroups= new Dictionary<string, List<string>>();
-
 
         private readonly RoomsController _roomsController;
         public RoomCanvasHub(RoomsController roomsController)
@@ -25,49 +25,57 @@ namespace GroupPaintOnlineWebApp.Shared.HUBServices
         }
         public override async Task OnConnectedAsync()
         {
+            Thread.Sleep(1000);
             Console.WriteLine("User Connected");
             await Clients.Caller.SendAsync("UserConnected", Context.ConnectionId);
         }
         public override async Task OnDisconnectedAsync(Exception exception)
         {
             Console.WriteLine("User Disconnected");
-            foreach (var item in OnlineClientsInGroups)
-            {
-                if (item.Value.Contains(Context.ConnectionId))
+
+                foreach (var item in OnlineClientsInGroups)
                 {
-                    var room = await _roomsController.GetRoom(item.Key);
-                    if (room.Value != null)
+                    if (item.Value.Contains(Context.ConnectionId))
                     {
-                        if (room.Value.CurrentUsers <= 1)
+                        var room = await _roomsController.GetRoom(item.Key);
+                        if (room.Value != null)
                         {
-                            await _roomsController.DeleteRoom(item.Key);
-                            OnlineClientsInGroups.Remove(item.Key);
-                            break;
-                        }
-                        else
-                        {
-                            room.Value.CurrentUsers -= 1;
-                            await _roomsController.PutRoom(item.Key, room.Value);
-                            item.Value.Remove(Context.ConnectionId);
+                            Room r = room.Value;
+                            if (r.CurrentUsers <= 1)
+                            {
+                                await _roomsController.DeleteRoom(r.Id);
+                                OnlineClientsInGroups.Remove(item.Key);
+                                break;
+                            }
+                            else
+                            {
+                                r.CurrentUsers -= 1;
+                                await _roomsController.PutRoom(r.Id, r);
+                                item.Value.Remove(Context.ConnectionId);
+                            }
+                            await Clients.All.SendAsync("UserDisconnected", Context.ConnectionId);
                         }
                     }
                 }
-            }
-                await Clients.All.SendAsync("UserDisconnected", Context.ConnectionId);
+            
+            
+            await base.OnDisconnectedAsync(exception);
         }
 
         public override async Task AddToGroup(string roomId, string connectionId)
         {
             var room = await _roomsController.GetRoom(roomId);
-            if (room.Value != null)
-            {
-                room.Value.CurrentUsers += 1;
-                await _roomsController.PutRoom(roomId,room.Value);
-                Console.WriteLine("User Added to Group");
-            }
-            if (!OnlineClientsInGroups.ContainsKey(roomId))
-                OnlineClientsInGroups[roomId] = new List<string>();
-            OnlineClientsInGroups[roomId].Add(connectionId);
+
+                if (room.Value != null)
+                {
+                    Room r = room.Value;
+                    r.CurrentUsers += 1;
+                    await _roomsController.PutRoom(roomId, r);
+                    Console.WriteLine("User Added to Group");
+                }
+                if (!OnlineClientsInGroups.ContainsKey(roomId))
+                    OnlineClientsInGroups[roomId] = new List<string>();
+                OnlineClientsInGroups[roomId].Add(connectionId);
             await Groups.AddToGroupAsync(connectionId, roomId);
         }
 
