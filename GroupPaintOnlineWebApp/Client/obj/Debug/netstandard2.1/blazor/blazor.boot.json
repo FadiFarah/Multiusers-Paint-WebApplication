@@ -6,7 +6,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
-      "GroupPaintOnlineWebApp.Client.dll": "sha256-jw66eeHkAY+f1Dflizu39vpxuiBn5vhaLmQjTabQyF4=",
+      "GroupPaintOnlineWebApp.Client.dll": "sha256-\/lbUX4pg5SRLw0AysMpcayVloVBWB8sHhlihMiK0Utc=",
       "Microsoft.AspNetCore.SignalR.Client.dll": "sha256-BodEYHOc5Lcr9NlsefBSp0aVUq1Z7zCGteE73iRv29E=",
       "Microsoft.Extensions.DependencyInjection.Abstractions.dll": "sha256-D9y5RXbA\/sEzwk6cnGbGMKQv87bvOEEVycrLUTe0lGU=",
       "netstandard.dll": "sha256-\/zcPVM75OAY+joGVM8yIC1gO1SFYWP1CFERgQ8PJkfA=",
@@ -69,7 +69,7 @@
       "Microsoft.AspNetCore.Components.dll": "sha256-PEg9ghiKSWBTX0jq8pFDvv2Yvw92Y8W0ELtWrSE4fhA=",
       "System.Net.Http.Json.dll": "sha256-brS4kX7v7bK5QHvD3m28MWueZWLhM2\/Redb9wvgCLAI=",
       "Microsoft.Extensions.Http.dll": "sha256-fXppSpNZWwDJhYYWU+uQSwXoC5Krwc+3mqRwKJz0FHY=",
-      "GroupPaintOnlineWebApp.Shared.dll": "sha256-M5ocgVraZT989pMjWU4QaPpzrzMX6MMutgXtM9ZMWE0=",
+      "GroupPaintOnlineWebApp.Shared.dll": "sha256-IlW\/byGpP5vMsFPMos+rO7w0L+qclzk9MwBM7QOXxyc=",
       "System.ComponentModel.Annotations.dll": "sha256-tmnkCmP9OzLUkpQ3LP7PRosi7gt5pyfEZCM6aqAokFI=",
       "System.ComponentModel.DataAnnotations.dll": "sha256-LIfCYwg+PHltTK4z3EnbSkA7m2cn8JS4jHVthdKrDF8=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-m7Q+cF5\/ji3OMfdGlCuE8pQ\/iM+kxNHLq\/IEWVvIaOg=",
@@ -89,9 +89,9 @@
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-czNf3btAeBW\/vvID5LAfgcsNZ+GM3ssVuPaMflcg0rs="
     },
     "pdb": {
-      "GroupPaintOnlineWebApp.Client.pdb": "sha256-zCunzNY+23q1wnDstnPmfXBq9oAF0\/BtpwmESWBuEpQ=",
+      "GroupPaintOnlineWebApp.Client.pdb": "sha256-3loUnjalNLc81+OFZDZueZy5EfoTGiXAJGhe9elHmuU=",
       "Blazor.Extensions.Canvas.pdb": "sha256-JF8vHi8kiD5tbiHU7xq5dwocqi8F+YLLiHsCS\/v4Ks0=",
-      "GroupPaintOnlineWebApp.Shared.pdb": "sha256-jbjqg6o5iAbsvCuXpKVKam9hnHG1AOHuV2WVwxLrRdQ="
+      "GroupPaintOnlineWebApp.Shared.pdb": "sha256-qkDlNQ\/c9ypgNio5jC5oUwbNi44ye4HBlsL0M5w2ifc="
     },
     "runtime": {
       "dotnet.3.2.0.js": "sha256-mPoqx7XczFHBWk3gRNn0hc9ekG1OvkKY4XiKRY5Mj5U=",

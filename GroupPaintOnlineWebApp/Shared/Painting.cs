@@ -11,5 +11,7 @@ namespace GroupPaintOnlineWebApp.Shared
         public string PaintingId { get; set; }
         public string UserName { get; set; }
         public string ImageURL { get; set; }
+        public string PaintingName { get; set; }
+        public DateTime Date { get; set; }
     }
 }

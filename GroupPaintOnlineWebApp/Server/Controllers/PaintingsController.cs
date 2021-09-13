@@ -25,13 +25,7 @@ namespace GroupPaintOnlineWebApp.Server.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Painting>>> GetPainting()
         {
-            var paintings = await _context.Painting.ToListAsync();
-            foreach (var paint in paintings)
-            {
-                if (paint.UserName != HttpContext.User.Identity.Name)
-                    paintings.Remove(paint);
-            }
-            return paintings;
+            return await _context.Painting.ToListAsync();
         }
 
         // GET: api/Paintings/5

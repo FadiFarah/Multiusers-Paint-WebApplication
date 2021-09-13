@@ -15,6 +15,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
+using GroupPaintOnlineWebApp.Shared.RESTServices.ServicesInterfaces;
 
 namespace GroupPaintOnlineWebApp.Client.PagesBase
 {
@@ -25,6 +26,8 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
         public IJSRuntime JsRuntime { get; set; }
         [Inject]
         public IRoomService RoomService { get; set; }
+        [Inject]
+        public IPaintingService PaintingService { get; set; }
         [Inject]
         public NavigationManager NavManager { get; set; }
 
@@ -148,6 +151,25 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
         public void ChatButtonClick()
         {
             DisplayChatBox = "block";
+        }
+        public async Task SaveButtonClick(string userName)
+        {
+            var room = await RoomService.GetRoom(Id).ContinueWith(o =>
+                o.Result.Content.ReadFromJsonAsync<Room>().Result
+            );
+            Painting painting = new Painting
+            {
+                UserName = userName,
+                PaintingId = Id,
+                ImageURL = ImageURL,
+                PaintingName=room.RoomName,
+                Date= DateTime.Now
+            };
+            var response = await PaintingService.PostPainting(painting);
+            if (response.StatusCode == HttpStatusCode.Conflict)
+            {
+                await PaintingService.PutPainting(Id,painting);
+            }
         }
         public void CloseChatBox()
         {
