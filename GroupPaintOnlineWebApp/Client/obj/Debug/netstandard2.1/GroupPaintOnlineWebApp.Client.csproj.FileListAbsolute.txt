@@ -1948,6 +1948,8 @@ C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebA
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\Razor\Pages\PaintingsList.razor.g.cs
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\IlW-byGpP5vMsFPMos_rO7w0L_qclzk9MwBM7QOXxyc=.hash
 C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\qkDlNQ-c9ypgNio5jC5oUwbNi44ye4HBlsL0M5w2ifc=.hash
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\-lbUX4pg5SRLw0AysMpcayVloVBWB8sHhlihMiK0Utc=.hash
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\3loUnjalNLc81_OFZDZueZy5EfoTGiXAJGhe9elHmuU=.hash
-C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\P7vu7iEYqe5podnCmphnPMq5mW-K836VJ5AH4DyFj6M=.hash
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\PaintingEdit.razor.g.cs
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\Razor\Pages\PaintingEdit.razor.g.cs
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\kMKCJPyrmtWzjd5AjXKjIrhXavfECCmAL0JuC1R307A=.hash
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\buA3MlRyznmWldm24l9UEYbARPAgGA2Y8xoKVZmb5pA=.hash
+C:\Users\fadif\source\repos\Multiusers-Paint-WebApplication\GroupPaintOnlineWebApp\Client\obj\Debug\netstandard2.1\integrity\O-r3BPCYEUUpUzcdfeISOIqGW9HNe8y1qkOCVmerF1Q=.hash
