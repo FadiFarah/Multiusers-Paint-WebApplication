@@ -1,0 +1,16 @@
+﻿{
+  "routes": [
+    {
+      "route": "/roomslist",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/authentication/login-callback",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/authentication/login",
+      "rewrite": "/index.html"
+    }
+  ]
+}

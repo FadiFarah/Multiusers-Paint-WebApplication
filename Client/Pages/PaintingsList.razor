@@ -1,0 +1,55 @@
+﻿@page "/paintingsList"
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+@inherits GroupPaintOnlineWebApp.Client.PagesBase.PaintingsListBase
+
+<div class="d-flex justify-content-center mb-3 align-items-stretch" style="width:100%">
+    <div class="p-2"><h1>MY PAINTINGS</h1></div>
+</div>
+
+
+<div><a href="/createroom">Create New</a></div>
+@if (Paintings == null)
+{
+    <h1>Loading...</h1>
+}
+else
+{
+    <div @onclick="CloseImageView" style="position:fixed;z-index:1;display:@DisplayImage ;width:100%;height:200%; background-color:rgba(0,0,0,0.8)">
+        <img src="@URL" style="position:fixed;background-color:white;width:40%; height:40%; top:30%;left:30%" />
+    </div>
+    <AuthorizeView>
+        <Authorized>
+
+            <div class="d-flex justify-content-center align-items-center text-center" style="width:100%">
+                <table style="margin:0 70px;" class="table">
+                    <thead>
+                        <tr>
+                            <th>Painting Name</th>
+                            <th>Date</th>
+                            <th> </th>
+                            <th> </th>
+                            <th> </th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var p in Paintings)
+                        {
+                            <tr>
+                                <td style="padding:50px 50px; background-size: cover; background-image: url(@p.ImageURL)"><mark style="font-size:20px; background-color:coral; opacity:0.8;">@p.PaintingName</mark></td>
+                                
+                                <td style="padding: 2% 2%;"><span class="auth-container"><a style="color:white; cursor:pointer" class="auth-btn" @onclick="()=> EnterOrRecreateRoom(p.RoomDetails)">Edit</a></span></td>
+                                <td style="padding: 2% 2%;"><span class="auth-container"><a style="color:white; cursor:pointer" class="auth-btn" @onclick="()=> ViewImageClick(p.ImageURL)">View</a></span></td>
+                                <td style="padding: 2% 2%;"><span class="auth-container"><a download="@p.PaintingName" href="@p.ImageURL" class="auth-btn">Download</a></span></td>
+                                <td style="padding: 2% 2%;"><span class="auth-container"><a @onclick="() => RemoveContributionPaintingClick(p.id)" style="color:white; cursor:pointer" class="auth-btn">Delete</a></span></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </Authorized>
+    </AuthorizeView>
+}
+
+
