@@ -13,26 +13,29 @@ namespace CosmosChangeFeedFunction
 {
     public class RoomTriggerFunction
     {
-        
+
         [FunctionName("RoomTriggerFunction")]
         public async Task Run([CosmosDBTrigger(
             databaseName: "GroupPaintOnlineDb",
             collectionName: "Rooms",
             ConnectionStringSetting = "",
             LeaseCollectionName = "leases")]IReadOnlyList<Document> input,
-            [SignalR( HubName = "roomsListHub")] IAsyncCollector<SignalRMessage> signalRMessages, ILogger log)
+            [SignalR(HubName = "roomsListHub")] IAsyncCollector<SignalRMessage> signalRMessages, ILogger log)
         {
             if (input != null && input.Count > 0)
             {
                 log.LogInformation("Documents modified " + input.Count);
-                log.LogInformation("First document Id " + input[0].Id);
-                await signalRMessages.AddAsync(new SignalRMessage
+                foreach (var i in input)
                 {
-                    Target = "roomsListUpdated",
-                    Arguments = new []{""},
-                });
+                    log.LogInformation("First document Id " + i.Id);
+                    await signalRMessages.AddAsync(new SignalRMessage
+                    {
+                        Target = "roomsListUpdated",
+                        Arguments = new[] { "" },
+                    });
+                }
+                return;
             }
-            return;
         }
     }
 }
