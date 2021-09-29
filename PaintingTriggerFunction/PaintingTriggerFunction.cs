@@ -22,16 +22,19 @@ namespace PaintingTriggerFunction
             if (input != null && input.Count > 0)
             {
                 logger.LogInformation("Documents modified " + input.Count);
-                logger.LogInformation("First document Id " + input[0].Id);
+                foreach (var i in input)
+                {
+                    logger.LogInformation("First document Id " + i.Id);
 
                     await signalRMessages.AddAsync(new SignalRMessage
                     {
-                        Target="paintingUpdated",
-                        GroupName = input[0].Id,
-                        Arguments = new[] { input[0].Id },
+                        Target = "paintingUpdated",
+                        GroupName = i.Id,
+                        Arguments = new[] { i.Id },
                     });
+                }
+                return;
             }
-            return;
         }
     }
 }
