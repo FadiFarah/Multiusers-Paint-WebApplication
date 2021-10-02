@@ -92,14 +92,20 @@ namespace ApiFunctions.Services
             try
             {
                 Container container = GetContainer();
-
-                ItemResponse<T> entityResult = await container
-                                                           .ReadItemAsync<T>(entity.id.ToString(), PartitionKey.None);
-
+                ItemResponse<T> entityResult = await container.ReadItemAsync<T>(entity.id.ToString(), PartitionKey.None);
                 if (entityResult != null)
                 {
-                    await container
-                          .ReplaceItemAsync(entity, entity.id.ToString(), PartitionKey.None);
+                    if (entity is Painting)
+                    {
+
+                        var requestOptions = new ItemRequestOptions
+                        {
+                            IfNoneMatchEtag = entity._etag
+                        };
+                        await container.ReplaceItemAsync(entity, entity.id.ToString(), PartitionKey.None, requestOptions);
+                    }
+                    else
+                        await container.ReplaceItemAsync(entity, entity.id.ToString(), PartitionKey.None);
                 }
                 return entity;
             }

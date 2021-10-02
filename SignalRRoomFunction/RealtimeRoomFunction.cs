@@ -39,9 +39,21 @@ namespace SignalRRoomFunction
         {
             JObject eventData = (JObject)eventGridEvent.Data;
             SignalRConnectionData data = eventData.ToObject<SignalRConnectionData>();
+            if (eventGridEvent.Data == null)
+            {
+                log.LogInformation("eventgridevent.data is null");
+            }
+            if (eventData == null)
+            {
+                log.LogInformation("event data is null");
+            }
+            if (data == null)
+            {
+                log.LogInformation("data is null");
+            }
             if (eventGridEvent.EventType == "Microsoft.SignalRService.ClientConnectionConnected")
             {
-
+                log.LogInformation("User connected");
                 await signalRMessages.AddAsync(new SignalRMessage
                 {
                     Target = "UserConnected",
@@ -59,11 +71,12 @@ namespace SignalRRoomFunction
                         Room room = await httpClient.GetFromJsonAsync<Room>("https://grouppaintonline-apim.azure-api.net/api/room/" + item.Key);
                         if (room != null)
                         {
+                            log.LogInformation(room.RoomName);
                             room.CurrentUsers -= 1;
-                            if(room.CurrentUsers>0)
+                            if (room.CurrentUsers > 0)
                                 await httpClient.PutAsJsonAsync("https://grouppaintonline-apim.azure-api.net/api/room/", room);
                             else
-                                await httpClient.DeleteAsync("https://grouppaintonline-apim.azure-api.net/api/room/"+room.id);
+                                await httpClient.DeleteAsync("https://grouppaintonline-apim.azure-api.net/api/room/" + room.id);
                             item.Value.Remove(data.ConnectionId);
                         }
                     }
@@ -86,7 +99,6 @@ namespace SignalRRoomFunction
         {
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             BodyDetails bodyDetails = JsonConvert.DeserializeObject<BodyDetails>(requestBody);
-            logger.LogInformation(bodyDetails.ConnectionId + " was added to group " + bodyDetails.GroupName);
 
             httpClient.DefaultRequestHeaders.Remove("Authorization");
             httpClient.DefaultRequestHeaders.Add("Authorization", bodyDetails.AccessToken);
@@ -114,6 +126,23 @@ namespace SignalRRoomFunction
                 });
         }
 
+        [FunctionName("sendpaintingupdates")]
+        public async Task SendPaintingUpdates([HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequest req,
+        [SignalR(HubName = "roomHub")]
+        IAsyncCollector<SignalRMessage> signalRMessages, ILogger logger)
+        {
+            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+            Painting painting = JsonConvert.DeserializeObject<Painting>(requestBody);
+            logger.LogInformation("Painting id " + painting.id + "has been updated");
+
+            await signalRMessages.AddAsync(
+                new SignalRMessage
+                {
+                    Target = "paintingUpdated",
+                    Arguments = new[] { painting },
+                    GroupName = painting.id,
+                });
+        }
         [FunctionName("sendchatmessage")]
         public async Task SendChatMessage([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequest req,
         [SignalR(HubName = "roomHub")]
@@ -122,12 +151,12 @@ namespace SignalRRoomFunction
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             BodyDetails bodyDetails = JsonConvert.DeserializeObject<BodyDetails>(requestBody);
             logger.LogInformation(bodyDetails.ConnectionId + " sent a message to group id " + bodyDetails.GroupName);
-            
+
             await signalRMessages.AddAsync(
                 new SignalRMessage
                 {
-                    Target="newChatMessage",
-                    Arguments=new[] { bodyDetails.Message },
+                    Target = "newChatMessage",
+                    Arguments = new[] { bodyDetails.Message },
                     GroupName = bodyDetails.GroupName,
                 });
         }
@@ -156,7 +185,7 @@ namespace SignalRRoomFunction
         IAsyncCollector<SignalRMessage> signalRMessages, ILogger logger)
         {
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            BodyDetails bodyDetails= JsonConvert.DeserializeObject<BodyDetails>(requestBody);
+            BodyDetails bodyDetails = JsonConvert.DeserializeObject<BodyDetails>(requestBody);
             logger.LogInformation(bodyDetails.ConnectionId + " sent a contribution request to group id " + bodyDetails.GroupName);
 
             await signalRMessages.AddAsync(
@@ -169,5 +198,5 @@ namespace SignalRRoomFunction
         }
 
     }
-    
+
 }

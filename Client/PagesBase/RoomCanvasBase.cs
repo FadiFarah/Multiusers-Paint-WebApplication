@@ -77,7 +77,7 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
         public Room Room { get; set; }
         public Painting Painting { get; set; }
         public BodyDetails BodyDetails { get; set; }
-        public Dictionary<string,string> ContributionRequesters { get; set; }
+        public Dictionary<string, string> ContributionRequesters { get; set; }
 
         protected override async Task OnInitializedAsync()
         {
@@ -87,7 +87,7 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
             response.TryGetToken(out var token);
             if (token.Value != null)
             {
-                httpClient.DefaultRequestHeaders.Add("Authorization", token.Value.ToString());
+                httpClient.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", token.Value.ToString());
                 BodyDetails.AccessToken = token.Value;
                 var handler = new JwtSecurityTokenHandler();
                 var userDetails = handler.ReadJwtToken(BodyDetails.AccessToken);
@@ -102,7 +102,6 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
             {
                 Room = await httpClient.GetFromJsonAsync<Room>("https://grouppaintonline-apim.azure-api.net/api/room/" + Id);
                 Painting = await httpClient.GetFromJsonAsync<Painting>("https://grouppaintonline-apim.azure-api.net/v1/painting/" + Id);
-                
                 ChatMessages = new();
                 DisplayChatBox = "none";
                 DisplayContributeModal = "none";
@@ -141,13 +140,10 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
             await Connection.StartAsync();
 
             ConnectionStatus = "Connected!";
-            Console.WriteLine(ConnectionStatus);
-            Console.WriteLine(NavManager.Uri);
-            Connection.Closed += async (s) =>
+            Connection.Closed += async (a) =>
             {
-                ConnectionStatus = "Disconnected";
-                Console.WriteLine(ConnectionStatus);
-                NavManager.NavigateTo("/room/"+Id+"/"+Password, true);
+                Console.WriteLine("Disconnected");
+                NavManager.NavigateTo(NavManager.BaseUri+"/roomslist", true);
             };
             Connection.On<string>("UserConnected", async (connectionId) =>
             {
@@ -166,18 +162,19 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
             });
 
 
-            Connection.On<string>("paintingUpdated", async (returnedId) =>
+            Connection.On<Painting>("paintingUpdated", async (returnedPainting) =>
             {
-                Painting = await httpClient.GetFromJsonAsync<Painting>("https://grouppaintonline-apim.azure-api.net/v1/painting/" + returnedId);
+                Painting = returnedPainting;
                 await JsRuntime.InvokeAsync<string>("updateAndDrawShapes", Painting.ShapesDetails);
                 if (Painting.ContributedUsers.Contains(UserId))
                 {
                     SavingState = "changes saved.";
                     StateHasChanged();
                 }
+
             });
 
-            Connection.On<string,string>("contributionRequest", (name,userId) =>
+            Connection.On<string, string>("contributionRequest", (name, userId) =>
             {
                 if (Painting.CreatorId == UserId)
                 {
@@ -187,7 +184,7 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
                 }
             });
 
-            Connection.On<string,string>("contributionResponse", async (userId,isAccepted) =>
+            Connection.On<string, string>("contributionResponse", async (userId, isAccepted) =>
             {
                 if (userId == UserId)
                 {
@@ -225,13 +222,15 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
 
         public async Task CanvasOnMouseUp()
         {
-            if(IsPainting)
+            if (IsPainting)
             {
                 Painting.ImageURL = await JsRuntime.InvokeAsync<string>("getNewImage");
                 Painting.ShapesDetails = await JsRuntime.InvokeAsync<ArrayList>("getShapesList");
                 IsPainting = false;
                 if (Painting.ContributedUsers.Contains(UserId))
                 {
+                    BodyDetails.ConnectionId = Connection.ConnectionId;
+                    BodyDetails.GroupName = Id;
                     await httpClient.PutAsJsonAsync("https://grouppaintonline-apim.azure-api.net/v1/painting/", Painting);
                     SavingState = "changes saved.";
                 }
@@ -248,6 +247,8 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
                 IsPainting = false;
                 if (Painting.ContributedUsers.Contains(UserId))
                 {
+                    BodyDetails.ConnectionId = Connection.ConnectionId;
+                    BodyDetails.GroupName = Id;
                     await httpClient.PutAsJsonAsync("https://grouppaintonline-apim.azure-api.net/v1/painting/", Painting);
                     SavingState = "changes saved.";
                 }
@@ -276,7 +277,7 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
         {
             if (DisplayChatBox == "none")
                 DisplayChatBox = "block";
-            else 
+            else
                 DisplayChatBox = "none";
         }
         public void CloseChatBox()
@@ -295,13 +296,13 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
             }
             return;
         }
-  
+
         public async Task ContributionRequestDeclined()
         {
-            await httpClient.PostAsJsonAsync("https://grouppaintonline-apim.azure-api.net/hub2/sendcontributionresponse", 
-                new {UserId=ContributionRequesters.Last().Key, IsAccepted = "false" });
+            await httpClient.PostAsJsonAsync("https://grouppaintonline-apim.azure-api.net/hub2/sendcontributionresponse",
+                new { UserId = ContributionRequesters.Last().Key, IsAccepted = "false" });
             ContributionRequesters.Remove(ContributionRequesters.Last().Key);
-            if(ContributionRequesters.Count==0)
+            if (ContributionRequesters.Count == 0)
                 DisplayContributionRequestModal = "none";
             StateHasChanged();
         }
@@ -365,7 +366,7 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
         }
         public async Task SharingAccepted()
         {
-            await httpClient.PostAsJsonAsync("https://grouppaintonline-apim.azure-api.net/send/sendinvitationlink", new{ ReceiverEmailInput,NavManager.Uri});
+            await httpClient.PostAsJsonAsync("https://grouppaintonline-apim.azure-api.net/send/sendinvitationlink", new { ReceiverEmailInput, NavManager.Uri });
             DisplayShareModal = "none";
             ReceiverEmailInput = "";
             return;

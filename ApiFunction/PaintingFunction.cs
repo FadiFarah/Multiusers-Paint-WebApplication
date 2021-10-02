@@ -9,15 +9,18 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using ApiFunctions.Models;
 using ApiFunctions.Services.Interfaces;
+using System.Net.Http;
 
 namespace ApiFunctions
 {
     public class PaintingFunction
     {
         private readonly ICosmosDbService<Painting> _paintingRepository;
+        private readonly HttpClient _httpClient;
 
-        public PaintingFunction(ICosmosDbService<Painting> paintingRepository)
+        public PaintingFunction(ICosmosDbService<Painting> paintingRepository, HttpClient httpClient)
         {
+            _httpClient = httpClient;
             _paintingRepository = paintingRepository ?? throw new ArgumentNullException(nameof(paintingRepository));
         }
         [FunctionName("GetPaintings")]
@@ -41,13 +44,13 @@ namespace ApiFunctions
             Painting painting = JsonConvert.DeserializeObject<Painting>(requestBody);
             var newPainting = new Painting
             {
-                id=painting.id,
-                ContributedUsers=painting.ContributedUsers,
-                ImageURL=painting.ImageURL,
-                PaintingName=painting.PaintingName,
-                RoomDetails=painting.RoomDetails,
-                CreatorId=painting.CreatorId,
-                ShapesDetails=painting.ShapesDetails
+                id = painting.id,
+                ContributedUsers = painting.ContributedUsers,
+                ImageURL = painting.ImageURL,
+                PaintingName = painting.PaintingName,
+                RoomDetails = painting.RoomDetails,
+                CreatorId = painting.CreatorId,
+                ShapesDetails = painting.ShapesDetails
             };
             var createdPainting = await _paintingRepository.AddAsync(newPainting);
             return new OkObjectResult(createdPainting);
@@ -68,6 +71,7 @@ namespace ApiFunctions
             var updatedPainting = await _paintingRepository.UpdateAsync(newPainting);
             if (updatedPainting == null)
                 return new NotFoundResult();
+            await _httpClient.PostAsJsonAsync("https://grouppaintonline-roomhubfunction.azurewebsites.net/api/sendpaintingupdates", updatedPainting);
             return new OkObjectResult(updatedPainting);
         }
     }

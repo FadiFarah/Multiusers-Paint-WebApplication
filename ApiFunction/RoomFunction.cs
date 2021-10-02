@@ -26,7 +26,7 @@ namespace GroupPaintOnlineWebApp.ApiFunction
             _roomRepository = roomRepository ?? throw new ArgumentNullException(nameof(roomRepository));
         }
         [FunctionName("GetRooms")]
-        public async Task<IActionResult> GetAllRoomsAsync([HttpTrigger(AuthorizationLevel.Function, "get", Route = "room")] HttpRequest req,ILogger log)
+        public async Task<IActionResult> GetAllRoomsAsync([HttpTrigger(AuthorizationLevel.Function, "get", Route = "room")] HttpRequest req, ILogger log)
         {
             var allRooms = await _roomRepository.GetAllAsync();
             return new OkObjectResult(allRooms);
@@ -46,7 +46,7 @@ namespace GroupPaintOnlineWebApp.ApiFunction
             Room room = JsonConvert.DeserializeObject<Room>(requestBody);
             var newRoom = new Room
             {
-                id=room.id,
+                id = room.id,
                 CurrentUsers = room.CurrentUsers,
                 RoomName = room.RoomName,
                 IsPublic = room.IsPublic,
@@ -60,7 +60,7 @@ namespace GroupPaintOnlineWebApp.ApiFunction
         [FunctionName("DeleteRoomById")]
         public async Task<IActionResult> DeleteRoomByIdAsync([HttpTrigger(AuthorizationLevel.Function, "delete", Route = "room/{id}")] HttpRequest req, string id, ILogger log)
         {
-            var alla =await _roomRepository.DeleteAsync(id).ConfigureAwait(true);
+            var alla = await _roomRepository.DeleteAsync(id).ConfigureAwait(true);
             await _httpClient.PostAsJsonAsync("https://grouppaintonline-roomslisthubfunction.azurewebsites.net/api/roomscountchanged", "");
             return new OkObjectResult(alla);
         }
@@ -73,6 +73,7 @@ namespace GroupPaintOnlineWebApp.ApiFunction
             var updatedRoom = await _roomRepository.UpdateAsync(newRoom);
             if (updatedRoom == null)
                 return new NotFoundResult();
+            await _httpClient.PostAsJsonAsync("https://grouppaintonline-roomslisthubfunction.azurewebsites.net/api/roomscountchanged", "");
             return new OkObjectResult(updatedRoom);
         }
     }
