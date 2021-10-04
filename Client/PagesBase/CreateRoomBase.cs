@@ -35,6 +35,7 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
         protected override async Task OnInitializedAsync()
         {
             Room = new Room();
+            Room.MaxUsers = 1;
             var response = await TokenProvider.RequestAccessToken();
             response.TryGetToken(out var token);
             if (token.Value != null)
@@ -51,6 +52,7 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
         {
             Console.WriteLine(Room.RoomName + " " + Room.IsPublic + " " + Room.Password);
             Room.id = Guid.NewGuid().ToString();
+
             await HttpClient.PostAsJsonAsync("https://grouppaintonline-apim.azure-api.net/api/room/", Room);
 
             Painting = new Painting

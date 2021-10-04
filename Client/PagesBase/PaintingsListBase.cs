@@ -86,8 +86,8 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
         public async Task EnterOrRecreateRoom(Room roomDetails)
         {
 
-            var Room = await httpClient.GetAsync("https://grouppaintonline-apim.azure-api.net/api/room/" + roomDetails.id);
-            if (Room.Content.ReadAsByteArrayAsync().Result.Length==0)
+            var response = await httpClient.GetAsync("https://grouppaintonline-apim.azure-api.net/api/room/" + roomDetails.id);
+            if (response.Content.ReadAsByteArrayAsync().Result.Length==0)
             {
                 var painting = Paintings.Find(paint => paint.id == roomDetails.id);
                 painting.CreatorId = UserId;
@@ -97,7 +97,11 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
             }
             else
             {
-                NavManager.NavigateTo("/room/" + roomDetails.id + "/" + roomDetails.Password, true);
+                Room room = await response.Content.ReadFromJsonAsync<Room>();
+                if(room.CurrentUsers>=room.MaxUsers)
+                    NavManager.NavigateTo("/paintingsList/", true);
+                else
+                    NavManager.NavigateTo("/room/" + roomDetails.id + "/" + roomDetails.Password, true);
             }
         }
     }

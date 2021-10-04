@@ -48,6 +48,7 @@ namespace GroupPaintOnlineWebApp.ApiFunction
             {
                 id = room.id,
                 CurrentUsers = room.CurrentUsers,
+                MaxUsers=room.MaxUsers,
                 RoomName = room.RoomName,
                 IsPublic = room.IsPublic,
                 Password = room.Password

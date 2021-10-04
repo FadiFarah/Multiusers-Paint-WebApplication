@@ -88,19 +88,21 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
             if (token.Value != null)
             {
                 httpClient.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", token.Value.ToString());
+                Console.WriteLine(token.Value);
                 BodyDetails.AccessToken = token.Value;
                 var handler = new JwtSecurityTokenHandler();
                 var userDetails = handler.ReadJwtToken(BodyDetails.AccessToken);
                 UserId = userDetails.Claims.First(claim => claim.Type == "oid").Value;
             }
 
-            if (Room != null && Room.Password != Password)
+
+            Room = await httpClient.GetFromJsonAsync<Room>("https://grouppaintonline-apim.azure-api.net/api/room/" + Id);
+            if (Room == null || Room.Password != Password || Room.CurrentUsers >= Room.MaxUsers)
             {
                 NavManager.NavigateTo("/roomslist");
             }
             else
             {
-                Room = await httpClient.GetFromJsonAsync<Room>("https://grouppaintonline-apim.azure-api.net/api/room/" + Id);
                 Painting = await httpClient.GetFromJsonAsync<Painting>("https://grouppaintonline-apim.azure-api.net/v1/painting/" + Id);
                 ChatMessages = new();
                 DisplayChatBox = "none";
@@ -143,7 +145,7 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
             Connection.Closed += async (a) =>
             {
                 Console.WriteLine("Disconnected");
-                NavManager.NavigateTo(NavManager.BaseUri+"/roomslist", true);
+                NavManager.NavigateTo("https://localhost:44371", true);
             };
             Connection.On<string>("UserConnected", async (connectionId) =>
             {

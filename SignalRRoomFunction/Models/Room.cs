@@ -11,6 +11,9 @@ namespace SignalRRoomFunction.Models
         [JsonPropertyName("currentUsers")]
         public int CurrentUsers { get; set; }
 
+        [JsonPropertyName("maxUsers")]
+        public int MaxUsers { get; set; }
+
         [JsonPropertyName("isPublic")]
         public bool IsPublic { get; set; }
 

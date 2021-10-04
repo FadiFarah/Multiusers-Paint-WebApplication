@@ -107,6 +107,7 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
                 Console.WriteLine(token.Value);
                 httpClient.DefaultRequestHeaders.Add("Authorization", token.Value.ToString());
                 Rooms = await httpClient.GetFromJsonAsync<Room[]>("https://grouppaintonline-apim.azure-api.net/api/room");
+                Console.WriteLine(token.Value);
             }
         }
         protected async Task FormSubmitted(EditContext editContext)
@@ -133,7 +134,7 @@ namespace GroupPaintOnlineWebApp.Client.PagesBase
         }
         public void CreateNewButton()
         {
-            NavManager.NavigateTo("/createroom",true);
+            NavManager.NavigateTo("/createroom", true);
         }
 
     }

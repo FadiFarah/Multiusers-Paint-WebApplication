@@ -15,6 +15,10 @@ namespace GroupPaintOnlineWebApp.Client.Models
         [JsonPropertyName("currentUsers")]
         public int CurrentUsers { get; set; }
 
+        [Range(1, 10)]
+        [JsonPropertyName("maxUsers")]
+        public int MaxUsers { get; set; }
+
         [JsonPropertyName("isPublic")]
         public bool IsPublic { get; set; }
 
