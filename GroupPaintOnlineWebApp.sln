@@ -14,7 +14,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRRoomFunction", "Sign
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaintingTriggerFunction", "PaintingTriggerFunction\PaintingTriggerFunction.csproj", "{6BB3489F-CB9B-4239-8B33-1577BAAC8676}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendGridInvitationFunction", "SendGridInvitationFunction\SendGridInvitationFunction.csproj", "{CB23FC59-8857-45D5-BD3F-F4C2873D1E20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SendGridInvitationFunction", "SendGridInvitationFunction\SendGridInvitationFunction.csproj", "{CB23FC59-8857-45D5-BD3F-F4C2873D1E20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

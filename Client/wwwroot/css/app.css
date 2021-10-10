@@ -35,7 +35,6 @@ a, .btn-link {
         }
 
         .main .top-row a:first-child {
-            overflow: hidden;
             text-overflow: ellipsis;
         }
 
@@ -255,6 +254,92 @@ li {
     border-radius: 5%;
     letter-spacing: 3px;
 }
+
+#about .container-fluid, #roomslist .container-fluid, #paintingslist .container-fluid {
+    background: linear-gradient(47deg, #000000, #000000, #fff);
+    background-size: 200% 350%;
+    -webkit-animation: AnimationName 6s ease infinite;
+    -moz-animation: AnimationName 6s ease infinite;
+    -o-animation: AnimationName 6s ease infinite;
+    animation: AnimationName 6s ease infinite;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 51%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 51%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-o-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 51%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 51%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.about-title, .roomslist-title, .paintingslist-title {
+    position: relative;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    top: 80px;
+    right: 1.2%;
+}
+
+    .about-title:before, .roomslist-title:before, .paintingslist-title:before {
+        content: "";
+        position: absolute;
+        width: 20%;
+        height: 1px;
+        top: 180%;
+        left: 40%;
+        border-bottom: 1px solid rgb(255, 255, 255);
+    }
 
 .auth-container {
     padding-left: 150px;

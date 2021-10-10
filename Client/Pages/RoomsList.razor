@@ -3,8 +3,12 @@
 @attribute [Authorize]
 @inherits GroupPaintOnlineWebApp.Client.PagesBase.RoomsListBase
 
-<div class="d-flex justify-content-center mb-3 align-items-stretch" style="width:100%">
-    <div class="p-2"><h1>ROOMS LIST</h1></div>
+<div id="roomslist" class="d-flex justify-content-center mb-3 align-items-stretch" style="width:100%">
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="col-lg-12 roomslist-title">ROOMS LIST</h1>
+        </div>
+    </div>
 </div>
 
 <div><a href="/createroom" @onclick="CreateNewButton">Create New</a></div>
