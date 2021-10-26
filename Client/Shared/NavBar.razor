@@ -19,9 +19,17 @@
     </NavLink>
 
 </div>
-<li><NavLink class="navbar-clicks" href="/about">About</NavLink></li>
-<li><NavLink class="navbar-clicks" href="/roomslist" @onclick="RoomsListNavigation">Rooms</NavLink></li>
-<li><NavLink class="navbar-clicks" href="/paintingsList" @onclick="PaintingsListNavigation">Paintings</NavLink></li>
+<AuthorizeView>
+    <Authorized>
+        <li><NavLink class="navbar-clicks" href="/about" @onclick="AboutNavigation">About</NavLink></li>
+        <li><NavLink class="navbar-clicks" href="/roomslist" @onclick="RoomsListNavigation">Rooms</NavLink></li>
+        <li><NavLink class="navbar-clicks" href="/paintingsList" @onclick="PaintingsListNavigation">Paintings</NavLink></li>
+    </Authorized>
+    <NotAuthorized>
+        <li><NavLink class="navbar-clicks" href="/about">About</NavLink></li>
+        <li><NavLink class="navbar-clicks" href="/roomslist" @onclick="RoomsListNavigation">Rooms</NavLink></li>
+    </NotAuthorized>
+</AuthorizeView>
 
 
 @code{
@@ -36,6 +44,11 @@
     void PaintingsListNavigation()
     {
         NavManager.NavigateTo("/paintingsList", true);
+    }
+    void AboutNavigation()
+    {
+        NavManager.NavigateTo("/about", true);
+
     }
 }
 
